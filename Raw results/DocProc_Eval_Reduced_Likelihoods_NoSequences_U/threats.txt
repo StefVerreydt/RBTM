@@ -1,0 +1,208 @@
+ID; threatened element; threat type; dataflow; risk; direct impact; indirect impact; lef
+1;DS1. generated docs archive;Denial of Service;DF12. generated document + delivery info;0.0;0.0;0.0;0.0
+2;DS1. generated docs archive;Information Disclosure;DF12. generated document + delivery info;0.0;2.0;0.0;0.0
+3;DS1. generated docs archive;Repudiation;DF12. generated document + delivery info;0.0;0.0;0.0;0.0
+4;P1. document scheduler;Denial of Service;DF12. generated document + delivery info;0.0;0.0;0.0;0.0
+5;P1. document scheduler;Elevation of Privilege;DF12. generated document + delivery info;0.0;0.0;0.56;0.0
+6;P1. document scheduler;Spoofing;DF12. generated document + delivery info;0.0;0.0;0.11200000000000003;0.0
+7;P1. document scheduler;Tampering;DF12. generated document + delivery info;0.0;2.0;0.7999999999999998;0.0
+8;DS2. PDS docs;Denial of Service;DF20. requested document;0.0;0.0;0.0;0.0
+9;DS2. PDS docs;Information Disclosure;DF20. requested document;0.0;2.0;0.0;0.0
+10;DS2. PDS docs;Repudiation;DF20. requested document;0.0;0.0;0.0;0.0
+11;P3. PDS;Denial of Service;DF20. requested document;0.0;0.0;0.0;0.0
+12;P3. PDS;Elevation of Privilege;DF20. requested document;0.0;0.0;1.1200000000000003;0.0
+13;P3. PDS;Spoofing;DF20. requested document;0.0;0.0;0.22400000000000012;0.0
+14;P3. PDS;Tampering;DF20. requested document;0.0;2.0;3.6000000000000005;0.0
+15;DS3. PDS user data;Denial of Service;DF23. login credentials;0.0;0.0;0.0;0.0
+16;DS3. PDS user data;Information Disclosure;DF23. login credentials;0.0;0.0;0.0;0.0
+17;DS3. PDS user data;Repudiation;DF23. login credentials;0.0;0.0;0.0;0.0
+18;P3. PDS;Denial of Service;DF23. login credentials;0.0;0.0;0.0;0.0
+19;P3. PDS;Elevation of Privilege;DF23. login credentials;0.0;0.0;1.12;0.0
+20;P3. PDS;Spoofing;DF23. login credentials;0.0;0.0;0.22400000000000012;0.0
+21;P3. PDS;Tampering;DF23. login credentials;0.0;2.0;3.6000000000000005;0.0
+22;E2. zoomit;Information Disclosure;DF3. delivery status + doc ID;0.0;2.0;0.0;0.0
+23;E2. zoomit;Repudiation;DF3. delivery status + doc ID;0.0;0.0;0.0;2.25
+24;E2. zoomit;Spoofing;DF3. delivery status + doc ID;0.0;0.0;0.0;2.25
+25;DF3. delivery status + doc ID;Denial of Service;DF3. delivery status + doc ID;0.0;0.0;0.0;2.25
+26;DF3. delivery status + doc ID;Information Disclosure;DF3. delivery status + doc ID;0.0;0.0;0.0;0.0
+27;DF3. delivery status + doc ID;Tampering;DF3. delivery status + doc ID;0.0;0.0;0.0;0.0
+28;P2. delivery manager;Denial of Service;DF3. delivery status + doc ID;0.0;0.0;0.0;2.25
+29;P2. delivery manager;Elevation of Privilege;DF3. delivery status + doc ID;0.0;0.0;0.0;2.25
+30;P2. delivery manager;Spoofing;DF3. delivery status + doc ID;0.0;0.0;0.0;2.25
+31;E3. email provider;Information Disclosure;DF5. delivery status + doc ID;0.0;2.0;0.0;0.0
+32;E3. email provider;Repudiation;DF5. delivery status + doc ID;0.0;0.0;0.0;2.25
+33;E3. email provider;Spoofing;DF5. delivery status + doc ID;0.0;0.0;0.0;2.25
+34;DF5. delivery status + doc ID;Denial of Service;DF5. delivery status + doc ID;0.0;0.0;0.0;2.25
+35;DF5. delivery status + doc ID;Information Disclosure;DF5. delivery status + doc ID;0.0;0.0;0.0;0.0
+36;DF5. delivery status + doc ID;Tampering;DF5. delivery status + doc ID;0.0;0.0;0.0;0.0
+37;P2. delivery manager;Denial of Service;DF5. delivery status + doc ID;0.0;0.0;0.0;2.25
+38;P2. delivery manager;Elevation of Privilege;DF5. delivery status + doc ID;0.0;0.0;0.0;2.25
+39;P2. delivery manager;Spoofing;DF5. delivery status + doc ID;0.0;0.0;0.0;2.25
+40;E4. PDS user;Information Disclosure;DF6. login cred + doc ID;0.0;2.0;0.0;0.0
+41;E4. PDS user;Information Disclosure;DF7. URL;0.0;2.0;0.0;0.0
+42;E4. PDS user;Information Disclosure;DF8. new user info (email, name, address, password);0.0;2.0;0.0;0.0
+43;E4. PDS user;Repudiation;DF6. login cred + doc ID;0.0;0.0;0.0;2.25
+44;E4. PDS user;Repudiation;DF7. URL;0.0;0.0;0.0;2.25
+45;E4. PDS user;Repudiation;DF8. new user info (email, name, address, password);0.0;0.0;0.0;2.25
+46;E4. PDS user;Spoofing;DF6. login cred + doc ID;0.0;0.0;0.0;2.25
+47;E4. PDS user;Spoofing;DF7. URL;0.0;0.0;0.0;2.25
+48;E4. PDS user;Spoofing;DF8. new user info (email, name, address, password);0.0;0.0;0.0;2.25
+49;DF6. login cred + doc ID;Denial of Service;DF6. login cred + doc ID;0.0;0.0;0.0;2.25
+50;DF7. URL;Denial of Service;DF7. URL;0.0;0.0;0.0;2.25
+51;DF8. new user info (email, name, address, password);Denial of Service;DF8. new user info (email, name, address, password);0.0;0.0;0.0;2.25
+52;DF6. login cred + doc ID;Information Disclosure;DF6. login cred + doc ID;0.0;0.0;0.0;0.0
+53;DF7. URL;Information Disclosure;DF7. URL;0.0;0.0;0.0;0.0
+54;DF8. new user info (email, name, address, password);Information Disclosure;DF8. new user info (email, name, address, password);0.0;0.0;0.0;0.0
+55;DF6. login cred + doc ID;Tampering;DF6. login cred + doc ID;0.0;0.0;0.0;0.0
+56;DF7. URL;Tampering;DF7. URL;0.0;0.0;0.0;0.0
+57;DF8. new user info (email, name, address, password);Tampering;DF8. new user info (email, name, address, password);0.0;0.0;0.0;0.0
+58;P3. PDS;Denial of Service;DF6. login cred + doc ID;0.0;0.0;0.0;2.25
+59;P3. PDS;Denial of Service;DF7. URL;0.0;0.0;0.0;2.25
+60;P3. PDS;Denial of Service;DF8. new user info (email, name, address, password);0.0;0.0;0.0;2.25
+61;P3. PDS;Elevation of Privilege;DF6. login cred + doc ID;0.0;0.0;0.0;0.0
+62;P3. PDS;Elevation of Privilege;DF7. URL;0.0;0.0;0.0;0.0
+63;P3. PDS;Elevation of Privilege;DF8. new user info (email, name, address, password);0.0;0.0;0.0;2.25
+64;P3. PDS;Spoofing;DF6. login cred + doc ID;0.0;0.0;0.0;0.0
+65;P3. PDS;Spoofing;DF7. URL;0.0;0.0;0.0;2.25
+66;P3. PDS;Spoofing;DF8. new user info (email, name, address, password);0.0;0.0;0.0;2.25
+67;P1. document scheduler;Denial of Service;DF13. document + delivery info;0.0;0.0;0.0;0.0
+68;P1. document scheduler;Elevation of Privilege;DF11. doc ID;0.0;0.0;0.0;0.0
+69;P1. document scheduler;Elevation of Privilege;DF13. document + delivery info;0.0;0.0;0.0;0.0
+70;P1. document scheduler;Information Disclosure;DF11. doc ID;0.0;2.0;0.0;0.0
+71;P1. document scheduler;Information Disclosure;DF13. document + delivery info;0.0;2.0;0.0;0.0
+72;P1. document scheduler;Repudiation;DF13. document + delivery info;0.0;0.0;0.0;0.0
+73;P1. document scheduler;Spoofing;DF11. doc ID;0.0;0.0;0.0;0.0
+74;P1. document scheduler;Spoofing;DF13. document + delivery info;0.0;0.0;0.0;0.0
+75;DS1. generated docs archive;Denial of Service;DF11. doc ID;0.0;0.0;0.0;0.0
+76;P2. delivery manager;Denial of Service;DF13. document + delivery info;0.0;0.0;0.0;0.0
+77;DS1. generated docs archive;Elevation of Privilege;DF11. doc ID;0.0;0.0;0.4;0.0
+78;P2. delivery manager;Elevation of Privilege;DF13. document + delivery info;0.0;0.0;0.0;0.0
+79;DS1. generated docs archive;Information Disclosure;DF11. doc ID;0.0;2.0;0.0;0.0
+80;DS1. generated docs archive;Repudiation;DF11. doc ID;0.0;0.0;0.0;0.0
+81;P2. delivery manager;Repudiation;DF13. document + delivery info;0.0;0.0;0.0;0.0
+82;P2. delivery manager;Spoofing;DF13. document + delivery info;0.0;0.0;0.0;0.0
+83;DS1. generated docs archive;Tampering;DF11. doc ID;0.0;2.0;0.0;0.0
+84;P2. delivery manager;Denial of Service;DF1. batch of docs with delivery info;0.0;0.0;0.0;2.25
+85;P2. delivery manager;Denial of Service;DF2. batch of docs with delivery info;0.0;0.0;0.0;2.25
+86;P2. delivery manager;Denial of Service;DF4. PDF or URL with delivery info;0.0;0.0;0.0;2.25
+87;P2. delivery manager;Denial of Service;DF15. doc;0.0;0.0;0.0;0.0
+88;P2. delivery manager;Denial of Service;DF16. doc + user ID;0.0;0.0;0.0;0.0
+89;P2. delivery manager;Elevation of Privilege;DF14. doc ID + delivery status;0.0;0.0;0.0;0.0
+90;P2. delivery manager;Elevation of Privilege;DF15. doc;0.0;0.0;0.0;0.0
+91;P2. delivery manager;Elevation of Privilege;DF16. doc + user ID;0.0;0.0;0.0;0.0
+92;P2. delivery manager;Information Disclosure;DF14. doc ID + delivery status;0.0;2.0;0.0;0.0
+93;P2. delivery manager;Information Disclosure;DF1. batch of docs with delivery info;0.0;2.0;0.0;0.0
+94;P2. delivery manager;Information Disclosure;DF2. batch of docs with delivery info;0.0;2.0;0.0;0.0
+95;P2. delivery manager;Information Disclosure;DF4. PDF or URL with delivery info;0.0;2.0;0.0;0.0
+96;P2. delivery manager;Information Disclosure;DF15. doc;0.0;2.0;0.0;0.0
+97;P2. delivery manager;Information Disclosure;DF16. doc + user ID;0.0;2.0;0.0;0.0
+98;P2. delivery manager;Repudiation;DF1. batch of docs with delivery info;2.25;1.0;0.0;2.25
+99;P2. delivery manager;Repudiation;DF2. batch of docs with delivery info;2.25;1.0;0.0;2.25
+100;P2. delivery manager;Repudiation;DF4. PDF or URL with delivery info;2.25;1.0;0.0;2.25
+101;P2. delivery manager;Repudiation;DF15. doc;0.0;0.0;0.0;0.0
+102;P2. delivery manager;Repudiation;DF16. doc + user ID;0.0;0.0;0.0;0.0
+103;P2. delivery manager;Spoofing;DF14. doc ID + delivery status;0.0;0.0;0.0;0.0
+104;P2. delivery manager;Spoofing;DF1. batch of docs with delivery info;1.35;0.0;0.6000000000000001;2.25
+105;P2. delivery manager;Spoofing;DF2. batch of docs with delivery info;1.35;0.0;0.6000000000000001;2.25
+106;P2. delivery manager;Spoofing;DF4. PDF or URL with delivery info;1.35;0.0;0.6000000000000001;2.25
+107;P2. delivery manager;Spoofing;DF15. doc;0.0;0.0;0.0;0.0
+108;P2. delivery manager;Spoofing;DF16. doc + user ID;0.0;0.0;0.0;0.0
+109;DF1. batch of docs with delivery info;Denial of Service;DF1. batch of docs with delivery info;0.0;0.0;0.0;2.25
+110;DF2. batch of docs with delivery info;Denial of Service;DF2. batch of docs with delivery info;0.0;0.0;0.0;2.25
+111;DF4. PDF or URL with delivery info;Denial of Service;DF4. PDF or URL with delivery info;0.0;0.0;0.0;2.25
+112;DF1. batch of docs with delivery info;Information Disclosure;DF1. batch of docs with delivery info;0.0;2.0;0.0;0.0
+113;DF2. batch of docs with delivery info;Information Disclosure;DF2. batch of docs with delivery info;0.0;2.0;0.0;0.0
+114;DF4. PDF or URL with delivery info;Information Disclosure;DF4. PDF or URL with delivery info;0.0;2.0;0.0;0.0
+115;DF1. batch of docs with delivery info;Tampering;DF1. batch of docs with delivery info;0.0;2.0;0.0;0.0
+116;DF2. batch of docs with delivery info;Tampering;DF2. batch of docs with delivery info;0.0;2.0;0.0;0.0
+117;DF4. PDF or URL with delivery info;Tampering;DF4. PDF or URL with delivery info;0.0;2.0;0.0;0.0
+118;DS1. generated docs archive;Denial of Service;DF14. doc ID + delivery status;0.0;0.0;0.0;0.0
+119;P3. PDS;Denial of Service;DF15. doc;0.0;0.0;0.0;0.0
+120;P3. PDS;Denial of Service;DF16. doc + user ID;0.0;0.0;0.0;0.0
+121;DS1. generated docs archive;Elevation of Privilege;DF14. doc ID + delivery status;0.0;0.0;0.4;0.0
+122;P3. PDS;Elevation of Privilege;DF15. doc;0.0;0.0;0.0;0.0
+123;P3. PDS;Elevation of Privilege;DF16. doc + user ID;0.0;0.0;0.0;0.0
+124;DS1. generated docs archive;Information Disclosure;DF14. doc ID + delivery status;0.0;2.0;0.0;0.0
+125;DS1. generated docs archive;Repudiation;DF14. doc ID + delivery status;0.0;0.0;0.0;0.0
+126;P3. PDS;Repudiation;DF15. doc;0.0;0.0;0.0;0.0
+127;P3. PDS;Repudiation;DF16. doc + user ID;0.0;0.0;0.0;0.0
+128;E1. print service;Spoofing;DF1. batch of docs with delivery info;3.15;1.0;0.3999999999999999;2.25
+129;E2. zoomit;Spoofing;DF2. batch of docs with delivery info;3.15;1.0;0.3999999999999999;2.25
+130;E3. email provider;Spoofing;DF4. PDF or URL with delivery info;3.15;1.0;0.3999999999999999;2.25
+131;P3. PDS;Spoofing;DF15. doc;0.0;0.0;0.0;0.0
+132;P3. PDS;Spoofing;DF16. doc + user ID;0.0;0.0;0.0;0.0
+133;DS1. generated docs archive;Tampering;DF14. doc ID + delivery status;0.0;2.0;0.0;0.0
+134;P3. PDS;Denial of Service;DF10. requested doc;0.0;0.0;0.0;2.25
+135;P3. PDS;Denial of Service;DF9. requested document;0.0;0.0;0.0;2.25
+136;P3. PDS;Denial of Service;DF17. delivery status + doc ID;0.0;0.0;0.0;0.0
+137;P3. PDS;Denial of Service;DF18. URL;0.0;0.0;0.0;0.0
+138;P3. PDS;Elevation of Privilege;DF19. doc ID;0.0;0.0;0.0;0.0
+139;P3. PDS;Elevation of Privilege;DF24. doc + user ID;0.0;0.0;0.0;0.0
+140;P3. PDS;Elevation of Privilege;DF25. doc + URL;0.0;0.0;0.0;0.0
+141;P3. PDS;Elevation of Privilege;DF21. new user info (email, name, address, password);0.0;0.0;0.0;0.0
+142;P3. PDS;Elevation of Privilege;DF22. user ID;0.0;0.0;0.0;0.0
+143;P3. PDS;Elevation of Privilege;DF17. delivery status + doc ID;0.0;0.0;0.0;0.0
+144;P3. PDS;Elevation of Privilege;DF18. URL;0.0;0.0;0.0;0.0
+145;P3. PDS;Information Disclosure;DF19. doc ID;0.0;2.0;0.0;0.0
+146;P3. PDS;Information Disclosure;DF24. doc + user ID;0.0;2.0;0.0;0.0
+147;P3. PDS;Information Disclosure;DF25. doc + URL;0.0;2.0;0.0;0.0
+148;P3. PDS;Information Disclosure;DF21. new user info (email, name, address, password);0.0;2.0;0.0;0.0
+149;P3. PDS;Information Disclosure;DF22. user ID;0.0;2.0;0.0;0.0
+150;P3. PDS;Information Disclosure;DF10. requested doc;0.0;2.0;0.0;0.0
+151;P3. PDS;Information Disclosure;DF9. requested document;0.0;2.0;0.0;0.0
+152;P3. PDS;Information Disclosure;DF17. delivery status + doc ID;0.0;2.0;0.0;0.0
+153;P3. PDS;Information Disclosure;DF18. URL;0.0;2.0;0.0;0.0
+154;P3. PDS;Repudiation;DF10. requested doc;2.25;1.0;0.0;2.25
+155;P3. PDS;Repudiation;DF9. requested document;2.25;1.0;0.0;2.25
+156;P3. PDS;Repudiation;DF17. delivery status + doc ID;0.0;0.0;0.0;0.0
+157;P3. PDS;Repudiation;DF18. URL;0.0;0.0;0.0;0.0
+158;P3. PDS;Spoofing;DF19. doc ID;0.0;0.0;0.0;0.0
+159;P3. PDS;Spoofing;DF24. doc + user ID;0.0;0.0;0.0;0.0
+160;P3. PDS;Spoofing;DF25. doc + URL;0.0;0.0;0.0;0.0
+161;P3. PDS;Spoofing;DF21. new user info (email, name, address, password);0.0;0.0;0.0;0.0
+162;P3. PDS;Spoofing;DF22. user ID;0.0;0.0;0.0;0.0
+163;P3. PDS;Spoofing;DF10. requested doc;1.35;0.0;0.6000000000000001;2.25
+164;P3. PDS;Spoofing;DF9. requested document;1.35;0.0;0.6000000000000001;2.25
+165;P3. PDS;Spoofing;DF17. delivery status + doc ID;0.0;0.0;0.0;0.0
+166;P3. PDS;Spoofing;DF18. URL;0.0;0.0;0.0;0.0
+167;DF10. requested doc;Denial of Service;DF10. requested doc;0.0;0.0;0.0;2.25
+168;DF9. requested document;Denial of Service;DF9. requested document;0.0;0.0;0.0;2.25
+169;DF10. requested doc;Information Disclosure;DF10. requested doc;0.0;2.0;0.0;0.0
+170;DF9. requested document;Information Disclosure;DF9. requested document;0.0;2.0;0.0;0.0
+171;DF10. requested doc;Tampering;DF10. requested doc;0.0;2.0;0.0;0.0
+172;DF9. requested document;Tampering;DF9. requested document;0.0;2.0;0.0;0.0
+173;DS2. PDS docs;Denial of Service;DF19. doc ID;0.0;0.0;0.0;0.0
+174;DS2. PDS docs;Denial of Service;DF24. doc + user ID;0.0;0.0;0.0;0.0
+175;DS2. PDS docs;Denial of Service;DF25. doc + URL;0.0;0.0;0.0;0.0
+176;DS3. PDS user data;Denial of Service;DF21. new user info (email, name, address, password);0.0;0.0;0.0;0.0
+177;DS3. PDS user data;Denial of Service;DF22. user ID;0.0;0.0;0.0;0.0
+178;P2. delivery manager;Denial of Service;DF17. delivery status + doc ID;0.0;0.0;0.0;0.0
+179;P2. delivery manager;Denial of Service;DF18. URL;0.0;0.0;0.0;0.0
+180;DS2. PDS docs;Elevation of Privilege;DF19. doc ID;0.0;0.0;0.4;0.0
+181;DS2. PDS docs;Elevation of Privilege;DF24. doc + user ID;0.0;0.0;0.4;0.0
+182;DS2. PDS docs;Elevation of Privilege;DF25. doc + URL;0.0;0.0;0.4;0.0
+183;DS3. PDS user data;Elevation of Privilege;DF21. new user info (email, name, address, password);0.0;0.0;0.0;0.0
+184;DS3. PDS user data;Elevation of Privilege;DF22. user ID;0.0;0.0;0.0;0.0
+185;P2. delivery manager;Elevation of Privilege;DF17. delivery status + doc ID;0.0;0.0;0.0;0.0
+186;P2. delivery manager;Elevation of Privilege;DF18. URL;0.0;0.0;0.0;0.0
+187;DS2. PDS docs;Information Disclosure;DF19. doc ID;0.0;2.0;0.0;0.0
+188;DS2. PDS docs;Information Disclosure;DF24. doc + user ID;0.0;2.0;0.0;0.0
+189;DS2. PDS docs;Information Disclosure;DF25. doc + URL;0.0;2.0;0.0;0.0
+190;DS3. PDS user data;Information Disclosure;DF21. new user info (email, name, address, password);0.0;0.0;0.0;0.0
+191;DS3. PDS user data;Information Disclosure;DF22. user ID;0.0;0.0;0.0;0.0
+192;DS2. PDS docs;Repudiation;DF19. doc ID;0.0;0.0;0.0;0.0
+193;DS2. PDS docs;Repudiation;DF24. doc + user ID;0.0;0.0;0.0;0.0
+194;DS2. PDS docs;Repudiation;DF25. doc + URL;0.0;0.0;0.0;0.0
+195;DS3. PDS user data;Repudiation;DF21. new user info (email, name, address, password);0.0;0.0;0.0;0.0
+196;DS3. PDS user data;Repudiation;DF22. user ID;0.0;0.0;0.0;0.0
+197;P2. delivery manager;Repudiation;DF17. delivery status + doc ID;0.0;0.0;0.0;0.0
+198;P2. delivery manager;Repudiation;DF18. URL;0.0;0.0;0.0;0.0
+199;E4. PDS user;Spoofing;DF10. requested doc;0.9;0.0;0.4;2.25
+200;E4. PDS user;Spoofing;DF9. requested document;0.9;0.0;0.4;2.25
+201;P2. delivery manager;Spoofing;DF17. delivery status + doc ID;0.0;0.0;0.0;0.0
+202;P2. delivery manager;Spoofing;DF18. URL;0.0;0.0;0.0;0.0
+203;DS2. PDS docs;Tampering;DF19. doc ID;0.0;2.0;0.0;0.0
+204;DS2. PDS docs;Tampering;DF24. doc + user ID;0.0;2.0;0.0;0.0
+205;DS2. PDS docs;Tampering;DF25. doc + URL;0.0;2.0;0.0;0.0
+206;DS3. PDS user data;Tampering;DF21. new user info (email, name, address, password);0.0;0.0;0.0;0.0
+207;DS3. PDS user data;Tampering;DF22. user ID;0.0;0.0;0.0;0.0

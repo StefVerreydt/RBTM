@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbtm:SBTMModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sbtm="http://distrinet.cs.kuleuven.be/sbtm" xmlns:securitydfd="http://security.distrinet.cs.kuleuven.be/securitydfd" name="DocProc SBTM Model">
+  <sequences name="Document Delivery: Zoomit">
+    <participants name="P1. document scheduler_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS1. generated docs archive_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P2. delivery manager_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="E2. zoomit_1">
+      <dataflowentity xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_KioMEHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF11. doc ID_1" carries="//@datatype.3" sender="//@sequences.0/@participants.0" recipient="//@sequences.0/@participants.1" sendingEnd="//@sequences.0/@ends.0" receivingEnd="//@sequences.0/@ends.1" returnmessage="//@sequences.0/@dataflows.1">
+      <dataflow href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF11. Doc + delivery info" carries="//@datatype.0 //@datatype.1" sender="//@sequences.0/@participants.1" recipient="//@sequences.0/@participants.0" sendingEnd="//@sequences.0/@ends.2" receivingEnd="//@sequences.0/@ends.3" invocationMessage="//@sequences.0/@dataflows.0">
+      <dataflow href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF13. document + delivery info_1" carries="//@datatype.0 //@datatype.1" sender="//@sequences.0/@participants.0" recipient="//@sequences.0/@participants.2" sendingEnd="//@sequences.0/@ends.4" receivingEnd="//@sequences.0/@ends.5">
+      <dataflow href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF2. batch of docs with delivery info_1" carries="//@datatype.0 //@datatype.1" sender="//@sequences.0/@participants.2" recipient="//@sequences.0/@participants.3" sendingEnd="//@sequences.0/@ends.6" receivingEnd="//@sequences.0/@ends.7" returnmessage="//@sequences.0/@dataflows.4">
+      <dataflow href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF2. batch of docs with delivery info_1_return" carries="//@datatype.3 //@datatype.2" sender="//@sequences.0/@participants.3" recipient="//@sequences.0/@participants.2" sendingEnd="//@sequences.0/@ends.8" receivingEnd="//@sequences.0/@ends.9" invocationMessage="//@sequences.0/@dataflows.3">
+      <dataflow href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF14. doc ID + delivery status_1" carries="//@datatype.2 //@datatype.3" sender="//@sequences.0/@participants.2" recipient="//@sequences.0/@participants.1" sendingEnd="//@sequences.0/@ends.10" receivingEnd="//@sequences.0/@ends.11">
+      <dataflow href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1" message="//@sequences.0/@dataflows.0" context="//@sequences.0/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1" message="//@sequences.0/@dataflows.0" context="//@sequences.0/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1_return" message="//@sequences.0/@dataflows.1" context="//@sequences.0/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1_return" message="//@sequences.0/@dataflows.1" context="//@sequences.0/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF13. document + delivery info_1" message="//@sequences.0/@dataflows.2" context="//@sequences.0/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF13. document + delivery info_1" message="//@sequences.0/@dataflows.2" context="//@sequences.0/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF2. batch of docs with delivery info_1" message="//@sequences.0/@dataflows.3" context="//@sequences.0/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF2. batch of docs with delivery info_1" message="//@sequences.0/@dataflows.3" context="//@sequences.0/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF2. batch of docs with delivery info_1_return" message="//@sequences.0/@dataflows.4" context="//@sequences.0/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF2. batch of docs with delivery info_1_return" message="//@sequences.0/@dataflows.4" context="//@sequences.0/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF14. doc ID + delivery status_1" message="//@sequences.0/@dataflows.5" context="//@sequences.0/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF14. doc ID + delivery status_1" message="//@sequences.0/@dataflows.5" context="//@sequences.0/@participants.1"/>
+  </sequences>
+  <sequences name="Document Delivery: P&amp;P">
+    <participants name="P1. document scheduler_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS1. generated docs archive_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P2. delivery manager_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="E1. print service_1">
+      <dataflowentity xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_HcjL8HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF11. doc ID_1" carries="//@datatype.3" sender="//@sequences.1/@participants.0" recipient="//@sequences.1/@participants.1" sendingEnd="//@sequences.1/@ends.0" receivingEnd="//@sequences.1/@ends.1" returnmessage="//@sequences.1/@dataflows.1">
+      <dataflow href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF11. doc ID_1_return" carries="//@datatype.0 //@datatype.1" sender="//@sequences.1/@participants.1" recipient="//@sequences.1/@participants.0" sendingEnd="//@sequences.1/@ends.2" receivingEnd="//@sequences.1/@ends.3" invocationMessage="//@sequences.1/@dataflows.0">
+      <dataflow href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF13. document + delivery info_1" carries="//@datatype.0 //@datatype.1" sender="//@sequences.1/@participants.0" recipient="//@sequences.1/@participants.2" sendingEnd="//@sequences.1/@ends.4" receivingEnd="//@sequences.1/@ends.5">
+      <dataflow href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF1. batch of docs with delivery info_1" carries="//@datatype.0 //@datatype.1" sender="//@sequences.1/@participants.2" recipient="//@sequences.1/@participants.3" sendingEnd="//@sequences.1/@ends.6" receivingEnd="//@sequences.1/@ends.7">
+      <dataflow href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF14. doc ID + delivery status_1" carries="//@datatype.0 //@datatype.2" sender="//@sequences.1/@participants.2" recipient="//@sequences.1/@participants.1" sendingEnd="//@sequences.1/@ends.8" receivingEnd="//@sequences.1/@ends.9">
+      <dataflow href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1" message="//@sequences.1/@dataflows.0" context="//@sequences.1/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1" message="//@sequences.1/@dataflows.0" context="//@sequences.1/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1_return" message="//@sequences.1/@dataflows.1" context="//@sequences.1/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1_return" message="//@sequences.1/@dataflows.1" context="//@sequences.1/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF13. document + delivery info_1" message="//@sequences.1/@dataflows.2" context="//@sequences.1/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF13. document + delivery info_1" message="//@sequences.1/@dataflows.2" context="//@sequences.1/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF1. batch of docs with delivery info_1" message="//@sequences.1/@dataflows.3" context="//@sequences.1/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF1. batch of docs with delivery info_1" message="//@sequences.1/@dataflows.3" context="//@sequences.1/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF14. doc ID + delivery status_1" message="//@sequences.1/@dataflows.4" context="//@sequences.1/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF14. doc ID + delivery status_1" message="//@sequences.1/@dataflows.4" context="//@sequences.1/@participants.1"/>
+  </sequences>
+  <sequences name="Document Delivery: Email PDF">
+    <participants name="P1. document scheduler_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS1. generated docs archive_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P2. delivery manager_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="E3. email provider_1">
+      <dataflowentity xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_MKDc4HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF11. doc ID_1" carries="//@datatype.3" sender="//@sequences.2/@participants.0" recipient="//@sequences.2/@participants.1" sendingEnd="//@sequences.2/@ends.0" receivingEnd="//@sequences.2/@ends.1" returnmessage="//@sequences.2/@dataflows.1">
+      <dataflow href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF11. doc ID_1_return" carries="//@datatype.0 //@datatype.1" sender="//@sequences.2/@participants.1" recipient="//@sequences.2/@participants.0" sendingEnd="//@sequences.2/@ends.2" receivingEnd="//@sequences.2/@ends.3" invocationMessage="//@sequences.2/@dataflows.0">
+      <dataflow href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF13. document + delivery info_1" carries="//@datatype.0 //@datatype.1" sender="//@sequences.2/@participants.0" recipient="//@sequences.2/@participants.2" sendingEnd="//@sequences.2/@ends.4" receivingEnd="//@sequences.2/@ends.5">
+      <dataflow href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF4. PDF or URL with delivery info_1" carries="//@datatype.0 //@datatype.1" sender="//@sequences.2/@participants.2" recipient="//@sequences.2/@participants.3" sendingEnd="//@sequences.2/@ends.6" receivingEnd="//@sequences.2/@ends.7" returnmessage="//@sequences.2/@dataflows.4">
+      <dataflow href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF4. PDF or URL with delivery info_1_return" carries="//@datatype.2 //@datatype.3" sender="//@sequences.2/@participants.3" recipient="//@sequences.2/@participants.2" sendingEnd="//@sequences.2/@ends.8" receivingEnd="//@sequences.2/@ends.9" invocationMessage="//@sequences.2/@dataflows.3">
+      <dataflow href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF14. doc ID + delivery status_1" carries="//@datatype.2 //@datatype.3" sender="//@sequences.2/@participants.2" recipient="//@sequences.2/@participants.1" sendingEnd="//@sequences.2/@ends.10" receivingEnd="//@sequences.2/@ends.11">
+      <dataflow href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1" message="//@sequences.2/@dataflows.0" context="//@sequences.2/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1" message="//@sequences.2/@dataflows.0" context="//@sequences.2/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1_return" message="//@sequences.2/@dataflows.1" context="//@sequences.2/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1_return" message="//@sequences.2/@dataflows.1" context="//@sequences.2/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF13. document + delivery info_1" message="//@sequences.2/@dataflows.2" context="//@sequences.2/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF13. document + delivery info_1" message="//@sequences.2/@dataflows.2" context="//@sequences.2/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF4. PDF or URL with delivery info_1" message="//@sequences.2/@dataflows.3" context="//@sequences.2/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF4. PDF or URL with delivery info_1" message="//@sequences.2/@dataflows.3" context="//@sequences.2/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF4. PDF or URL with delivery info_1_return" message="//@sequences.2/@dataflows.4" context="//@sequences.2/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF4. PDF or URL with delivery info_1_return" message="//@sequences.2/@dataflows.4" context="//@sequences.2/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF14. doc ID + delivery status_1" message="//@sequences.2/@dataflows.5" context="//@sequences.2/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF14. doc ID + delivery status_1" message="//@sequences.2/@dataflows.5" context="//@sequences.2/@participants.1"/>
+  </sequences>
+  <sequences name="Document Delivery: Email URL">
+    <participants name="P1. document scheduler_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS1. generated docs archive_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P2. delivery manager_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P3. PDS_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS2. PDS docs_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="E3. email provider_1">
+      <dataflowentity xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_MKDc4HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF11. doc ID_1" carries="//@datatype.3" sender="//@sequences.3/@participants.0" recipient="//@sequences.3/@participants.1" sendingEnd="//@sequences.3/@ends.0" receivingEnd="//@sequences.3/@ends.1" returnmessage="//@sequences.3/@dataflows.1">
+      <dataflow href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF11. doc ID_1_return" carries="//@datatype.0 //@datatype.1" sender="//@sequences.3/@participants.1" recipient="//@sequences.3/@participants.0" sendingEnd="//@sequences.3/@ends.2" receivingEnd="//@sequences.3/@ends.3" invocationMessage="//@sequences.3/@dataflows.0">
+      <dataflow href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF13. document + delivery info_1" carries="//@datatype.0 //@datatype.1" sender="//@sequences.3/@participants.0" recipient="//@sequences.3/@participants.2" sendingEnd="//@sequences.3/@ends.4" receivingEnd="//@sequences.3/@ends.5">
+      <dataflow href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF15. doc_1" carries="//@datatype.0" sender="//@sequences.3/@participants.2" recipient="//@sequences.3/@participants.3" sendingEnd="//@sequences.3/@ends.6" receivingEnd="//@sequences.3/@ends.7" returnmessage="//@sequences.3/@dataflows.5">
+      <dataflow href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF25. doc_1" carries="//@datatype.0 //@datatype.4" sender="//@sequences.3/@participants.3" recipient="//@sequences.3/@participants.4" sendingEnd="//@sequences.3/@ends.8" receivingEnd="//@sequences.3/@ends.9">
+      <dataflow href="DocProc.securitydfd#_N1K9EKEQEeu8Ku0FHazJFw"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF18. URL" carries="//@datatype.4" sender="//@sequences.3/@participants.3" recipient="//@sequences.3/@participants.2" sendingEnd="//@sequences.3/@ends.10" receivingEnd="//@sequences.3/@ends.11" invocationMessage="//@sequences.3/@dataflows.3">
+      <dataflow href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF4. URL with delivery info_1" carries="//@datatype.4 //@datatype.1 //@datatype.3" sender="//@sequences.3/@participants.2" recipient="//@sequences.3/@participants.5" sendingEnd="//@sequences.3/@ends.12" receivingEnd="//@sequences.3/@ends.13" returnmessage="//@sequences.3/@dataflows.7">
+      <dataflow href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF5. delivery status" carries="//@datatype.2 //@datatype.3" sender="//@sequences.3/@participants.5" recipient="//@sequences.3/@participants.2" sendingEnd="//@sequences.3/@ends.14" receivingEnd="//@sequences.3/@ends.15" invocationMessage="//@sequences.3/@dataflows.6">
+      <dataflow href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF14. doc ID + delivery status_1" carries="//@datatype.3 //@datatype.2" sender="//@sequences.3/@participants.2" recipient="//@sequences.3/@participants.1" sendingEnd="//@sequences.3/@ends.16" receivingEnd="//@sequences.3/@ends.17">
+      <dataflow href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1" message="//@sequences.3/@dataflows.0" context="//@sequences.3/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1" message="//@sequences.3/@dataflows.0" context="//@sequences.3/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1_return" message="//@sequences.3/@dataflows.1" context="//@sequences.3/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1_return" message="//@sequences.3/@dataflows.1" context="//@sequences.3/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF13. document + delivery info_1" message="//@sequences.3/@dataflows.2" context="//@sequences.3/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF13. document + delivery info_1" message="//@sequences.3/@dataflows.2" context="//@sequences.3/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF15. doc_1" message="//@sequences.3/@dataflows.3" context="//@sequences.3/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF15. doc_1" message="//@sequences.3/@dataflows.3" context="//@sequences.3/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF25. doc_1" message="//@sequences.3/@dataflows.4" context="//@sequences.3/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF25. doc_1" message="//@sequences.3/@dataflows.4" context="//@sequences.3/@participants.4"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF15. doc_1_return" message="//@sequences.3/@dataflows.5" context="//@sequences.3/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF15. doc_1_return" message="//@sequences.3/@dataflows.5" context="//@sequences.3/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF4. PDF or URL with delivery info_1" message="//@sequences.3/@dataflows.6" context="//@sequences.3/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF4. PDF or URL with delivery info_1" message="//@sequences.3/@dataflows.6" context="//@sequences.3/@participants.5"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF4. PDF or URL with delivery info_1_return" message="//@sequences.3/@dataflows.7" context="//@sequences.3/@participants.5"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF4. PDF or URL with delivery info_1_return" message="//@sequences.3/@dataflows.7" context="//@sequences.3/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF14. doc ID + delivery status_1" message="//@sequences.3/@dataflows.8" context="//@sequences.3/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF14. doc ID + delivery status_1" message="//@sequences.3/@dataflows.8" context="//@sequences.3/@participants.1"/>
+  </sequences>
+  <sequences name="Document Delivery: Registered PDS User">
+    <participants name="P1. document scheduler_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS1. generated docs archive_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P2. delivery manager_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P3. PDS_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS2. PDS docs_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF11. doc ID_1" carries="//@datatype.3" sender="//@sequences.4/@participants.0" recipient="//@sequences.4/@participants.1" sendingEnd="//@sequences.4/@ends.0" receivingEnd="//@sequences.4/@ends.1" returnmessage="//@sequences.4/@dataflows.1">
+      <dataflow href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF11. doc ID_1_return" carries="//@datatype.0 //@datatype.1" sender="//@sequences.4/@participants.1" recipient="//@sequences.4/@participants.0" sendingEnd="//@sequences.4/@ends.2" receivingEnd="//@sequences.4/@ends.3" invocationMessage="//@sequences.4/@dataflows.0">
+      <dataflow href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF13. document + delivery info_1" carries="//@datatype.0 //@datatype.1" sender="//@sequences.4/@participants.0" recipient="//@sequences.4/@participants.2" sendingEnd="//@sequences.4/@ends.4" receivingEnd="//@sequences.4/@ends.5">
+      <dataflow href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF16. doc + user ID_1" carries="//@datatype.0 //@datatype.5" sender="//@sequences.4/@participants.2" recipient="//@sequences.4/@participants.3" sendingEnd="//@sequences.4/@ends.6" receivingEnd="//@sequences.4/@ends.7" returnmessage="//@sequences.4/@dataflows.5">
+      <dataflow href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF24. doc + user ID_1" carries="//@datatype.0 //@datatype.5" sender="//@sequences.4/@participants.3" recipient="//@sequences.4/@participants.4" sendingEnd="//@sequences.4/@ends.8" receivingEnd="//@sequences.4/@ends.9">
+      <dataflow href="DocProc.securitydfd#_1F0j4KEOEeu8Ku0FHazJFw"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF16. doc + user ID_1_return" carries="//@datatype.3 //@datatype.2" sender="//@sequences.4/@participants.3" recipient="//@sequences.4/@participants.2" sendingEnd="//@sequences.4/@ends.10" receivingEnd="//@sequences.4/@ends.11" invocationMessage="//@sequences.4/@dataflows.3">
+      <dataflow href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF14. doc ID + delivery status_1" carries="//@datatype.3 //@datatype.2" sender="//@sequences.4/@participants.2" recipient="//@sequences.4/@participants.1" sendingEnd="//@sequences.4/@ends.12" receivingEnd="//@sequences.4/@ends.13">
+      <dataflow href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1" message="//@sequences.4/@dataflows.0" context="//@sequences.4/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1" message="//@sequences.4/@dataflows.0" context="//@sequences.4/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF11. doc ID_1_return" message="//@sequences.4/@dataflows.1" context="//@sequences.4/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF11. doc ID_1_return" message="//@sequences.4/@dataflows.1" context="//@sequences.4/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF13. document + delivery info_1" message="//@sequences.4/@dataflows.2" context="//@sequences.4/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF13. document + delivery info_1" message="//@sequences.4/@dataflows.2" context="//@sequences.4/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF16. doc + user ID_1" message="//@sequences.4/@dataflows.3" context="//@sequences.4/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF16. doc + user ID_1" message="//@sequences.4/@dataflows.3" context="//@sequences.4/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF24. doc + user ID_1" message="//@sequences.4/@dataflows.4" context="//@sequences.4/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF24. doc + user ID_1" message="//@sequences.4/@dataflows.4" context="//@sequences.4/@participants.4"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF16. doc + user ID_1_return" message="//@sequences.4/@dataflows.5"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF16. doc + user ID_1_return" message="//@sequences.4/@dataflows.5"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF14. doc ID + delivery status_1" message="//@sequences.4/@dataflows.6" context="//@sequences.4/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF14. doc ID + delivery status_1" message="//@sequences.4/@dataflows.6" context="//@sequences.4/@participants.1"/>
+  </sequences>
+  <sequences name="PDS Registration">
+    <participants name="E4. PDS user_1">
+      <dataflowentity xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P3. PDS_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS3. PDS user data_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF8. new user info (email, name, address, password)_1" carries="//@datatype.6" sender="//@sequences.5/@participants.0" recipient="//@sequences.5/@participants.1" sendingEnd="//@sequences.5/@ends.0" receivingEnd="//@sequences.5/@ends.1">
+      <dataflow href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF21. new user info (email, name, address, password)_1" carries="//@datatype.6 //@datatype.5" sender="//@sequences.5/@participants.1" recipient="//@sequences.5/@participants.2" sendingEnd="//@sequences.5/@ends.2" receivingEnd="//@sequences.5/@ends.3">
+      <dataflow href="DocProc.securitydfd#_SUYUUHeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF8. new user info (email, name, address, password)_1" message="//@sequences.5/@dataflows.0" context="//@sequences.5/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF8. new user info (email, name, address, password)_1" message="//@sequences.5/@dataflows.0" context="//@sequences.5/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF21. new user info (email, name, address, password)_1" message="//@sequences.5/@dataflows.1" context="//@sequences.5/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF21. new user info (email, name, address, password)_1" message="//@sequences.5/@dataflows.1" context="//@sequences.5/@participants.2"/>
+  </sequences>
+  <sequences name="PDS Document Retrieval: URL">
+    <participants name="E4. PDS user_1">
+      <dataflowentity xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P3. PDS_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS2. PDS docs_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P2. delivery manager_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS1. generated docs archive_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF7. URL_1" carries="//@datatype.4" sender="//@sequences.6/@participants.0" recipient="//@sequences.6/@participants.1" sendingEnd="//@sequences.6/@ends.0" receivingEnd="//@sequences.6/@ends.1" returnmessage="//@sequences.6/@dataflows.5">
+      <dataflow href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF19. doc ID_1" carries="//@datatype.3" sender="//@sequences.6/@participants.1" recipient="//@sequences.6/@participants.2" sendingEnd="//@sequences.6/@ends.2" receivingEnd="//@sequences.6/@ends.3" returnmessage="//@sequences.6/@dataflows.2">
+      <dataflow href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF19. doc ID_1_return" carries="//@datatype.0" sender="//@sequences.6/@participants.2" recipient="//@sequences.6/@participants.1" sendingEnd="//@sequences.6/@ends.4" receivingEnd="//@sequences.6/@ends.5" invocationMessage="//@sequences.6/@dataflows.1">
+      <dataflow href="DocProc.securitydfd#_OUD5gHeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF17. delivery status + doc ID_1" carries="//@datatype.3 //@datatype.2" sender="//@sequences.6/@participants.1" recipient="//@sequences.6/@participants.3" sendingEnd="//@sequences.6/@ends.6" receivingEnd="//@sequences.6/@ends.7">
+      <dataflow href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF14. doc ID + delivery status_1" carries="//@datatype.3 //@datatype.2" sender="//@sequences.6/@participants.3" recipient="//@sequences.6/@participants.4" sendingEnd="//@sequences.6/@ends.8" receivingEnd="//@sequences.6/@ends.9">
+      <dataflow href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="Requested doc" carries="//@datatype.0" sender="//@sequences.6/@participants.1" recipient="//@sequences.6/@participants.0" sendingEnd="//@sequences.6/@ends.10" receivingEnd="//@sequences.6/@ends.11" invocationMessage="//@sequences.6/@dataflows.0">
+      <dataflow href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF7. URL_1" message="//@sequences.6/@dataflows.0" context="//@sequences.6/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF7. URL_1" message="//@sequences.6/@dataflows.0" context="//@sequences.6/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF19. doc ID_1" message="//@sequences.6/@dataflows.1" context="//@sequences.6/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF19. doc ID_1" message="//@sequences.6/@dataflows.1" context="//@sequences.6/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF19. doc ID_1_return" message="//@sequences.6/@dataflows.2" context="//@sequences.6/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF19. doc ID_1_return" message="//@sequences.6/@dataflows.2" context="//@sequences.6/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF17. delivery status + doc ID_1" message="//@sequences.6/@dataflows.3" context="//@sequences.6/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF17. delivery status + doc ID_1" message="//@sequences.6/@dataflows.3" context="//@sequences.6/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF14. doc ID + delivery status_1" message="//@sequences.6/@dataflows.4" context="//@sequences.6/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF14. doc ID + delivery status_1" message="//@sequences.6/@dataflows.4" context="//@sequences.6/@participants.4"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF7. URL_1_return" message="//@sequences.6/@dataflows.5" context="//@sequences.6/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF7. URL_1_return" message="//@sequences.6/@dataflows.5" context="//@sequences.6/@participants.0"/>
+  </sequences>
+  <sequences name="PDS Document Retrieval: Registered User">
+    <participants name="E4. PDS user_1">
+      <dataflowentity xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P3. PDS_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS3. PDS user data_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS2. PDS docs_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="P2. delivery manager_1">
+      <dataflowentity xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <participants name="DS1. generated docs archive_1">
+      <dataflowentity xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+    </participants>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF6. login cred + doc ID_1" carries="//@datatype.6 //@datatype.3" sender="//@sequences.7/@participants.0" recipient="//@sequences.7/@participants.1" sendingEnd="//@sequences.7/@ends.0" receivingEnd="//@sequences.7/@ends.1" returnmessage="//@sequences.7/@dataflows.7">
+      <dataflow href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF22. user ID_1" carries="//@datatype.5" sender="//@sequences.7/@participants.1" recipient="//@sequences.7/@participants.2" sendingEnd="//@sequences.7/@ends.2" receivingEnd="//@sequences.7/@ends.3" returnmessage="//@sequences.7/@dataflows.2">
+      <dataflow href="DocProc.securitydfd#_YmFi8HeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF22. user ID_1_return" carries="//@datatype.6" sender="//@sequences.7/@participants.2" recipient="//@sequences.7/@participants.1" sendingEnd="//@sequences.7/@ends.4" receivingEnd="//@sequences.7/@ends.5" invocationMessage="//@sequences.7/@dataflows.1">
+      <dataflow href="DocProc.securitydfd#_aFh8cHeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF19. doc ID_1" carries="//@datatype.3" sender="//@sequences.7/@participants.1" recipient="//@sequences.7/@participants.3" sendingEnd="//@sequences.7/@ends.6" receivingEnd="//@sequences.7/@ends.7" returnmessage="//@sequences.7/@dataflows.4">
+      <dataflow href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF19. doc ID_1_return" carries="//@datatype.0" sender="//@sequences.7/@participants.3" recipient="//@sequences.7/@participants.1" sendingEnd="//@sequences.7/@ends.8" receivingEnd="//@sequences.7/@ends.9" invocationMessage="//@sequences.7/@dataflows.3">
+      <dataflow href="DocProc.securitydfd#_OUD5gHeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF17. delivery status + doc ID_1" carries="//@datatype.3 //@datatype.2" sender="//@sequences.7/@participants.1" recipient="//@sequences.7/@participants.4" sendingEnd="//@sequences.7/@ends.10" receivingEnd="//@sequences.7/@ends.11">
+      <dataflow href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:CallMessage" name="DF14. doc ID + delivery status_1" carries="//@datatype.3 //@datatype.2" sender="//@sequences.7/@participants.4" recipient="//@sequences.7/@participants.5" sendingEnd="//@sequences.7/@ends.12" receivingEnd="//@sequences.7/@ends.13">
+      <dataflow href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <dataflows xsi:type="sbtm:ReturnMessage" name="DF6. login cred + doc ID_1_return" carries="//@datatype.0" sender="//@sequences.7/@participants.1" recipient="//@sequences.7/@participants.0" sendingEnd="//@sequences.7/@ends.14" receivingEnd="//@sequences.7/@ends.15" invocationMessage="//@sequences.7/@dataflows.0">
+      <dataflow href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+    </dataflows>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF6. login cred + doc ID_1" message="//@sequences.7/@dataflows.0" context="//@sequences.7/@participants.0"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF6. login cred + doc ID_1" message="//@sequences.7/@dataflows.0" context="//@sequences.7/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF22. user ID_1" message="//@sequences.7/@dataflows.1" context="//@sequences.7/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF22. user ID_1" message="//@sequences.7/@dataflows.1" context="//@sequences.7/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF22. user ID_1_return" message="//@sequences.7/@dataflows.2" context="//@sequences.7/@participants.2"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF22. user ID_1_return" message="//@sequences.7/@dataflows.2" context="//@sequences.7/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF19. doc ID_1" message="//@sequences.7/@dataflows.3" context="//@sequences.7/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF19. doc ID_1" message="//@sequences.7/@dataflows.3" context="//@sequences.7/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF19. doc ID_1_return" message="//@sequences.7/@dataflows.4" context="//@sequences.7/@participants.3"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF19. doc ID_1_return" message="//@sequences.7/@dataflows.4" context="//@sequences.7/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF17. delivery status + doc ID_1" message="//@sequences.7/@dataflows.5" context="//@sequences.7/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF17. delivery status + doc ID_1" message="//@sequences.7/@dataflows.5" context="//@sequences.7/@participants.4"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF14. doc ID + delivery status_1" message="//@sequences.7/@dataflows.6" context="//@sequences.7/@participants.4"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF14. doc ID + delivery status_1" message="//@sequences.7/@dataflows.6" context="//@sequences.7/@participants.5"/>
+    <ends xsi:type="sbtm:MessageEnd" name="send_DF6. login cred + doc ID_1_return" message="//@sequences.7/@dataflows.7" context="//@sequences.7/@participants.1"/>
+    <ends xsi:type="sbtm:MessageEnd" name="receive_DF6. login cred + doc ID_1_return" message="//@sequences.7/@dataflows.7" context="//@sequences.7/@participants.0"/>
+  </sequences>
+  <dfdmodel href="DocProc.securitydfd#_-JoPEHd_Eeud_Ok1w7PbGQ"/>
+  <datatype name="Doc">
+    <lossMagnitude value="//@datatype.0/@estimates.1">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <lossMagnitude value="//@datatype.0/@estimates.0">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <estimates minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+    <estimates minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+  </datatype>
+  <datatype name="Delivery information"/>
+  <datatype name="Delivery status"/>
+  <datatype name="Doc ID"/>
+  <datatype name="Doc URL"/>
+  <datatype name="User ID"/>
+  <datatype name="User credentials"/>
+  <singleThreatCollection name="Concrete threat collection">
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="1">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.8 //@abstractThreatCollection/@threats.9" id="2">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="3">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="4">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" causeOf="//@singleThreatCollection/@threats.6/@effectOf.0" id="5">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="5" cause="6"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.4/@effectOf.0" id="6">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.2" causeOf="//@singleThreatCollection/@threats.66/@effectOf.0 //@singleThreatCollection/@threats.70/@effectOf.0 //@singleThreatCollection/@threats.69/@effectOf.0" id="7">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.2/@effectOf.0" effect="7" cause="5"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_b-68cHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="8">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_OUD5gHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.8 //@abstractThreatCollection/@threats.9" id="9">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_OUD5gHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="10">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_OUD5gHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="11">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="11" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_OUD5gHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" causeOf="//@singleThreatCollection/@threats.13/@effectOf.0" id="12">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="12" cause="13"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_OUD5gHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.11/@effectOf.0" id="13">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_OUD5gHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.2" causeOf="//@singleThreatCollection/@threats.17/@effectOf.0 //@singleThreatCollection/@threats.57/@effectOf.0 //@singleThreatCollection/@threats.58/@effectOf.0 //@singleThreatCollection/@threats.118/@effectOf.0 //@singleThreatCollection/@threats.119/@effectOf.0 //@singleThreatCollection/@threats.59/@effectOf.0 //@singleThreatCollection/@threats.135/@effectOf.0 //@singleThreatCollection/@threats.134/@effectOf.0 //@singleThreatCollection/@threats.136/@effectOf.0 //@singleThreatCollection/@threats.133/@effectOf.0 //@singleThreatCollection/@threats.145/@effectOf.0 //@singleThreatCollection/@threats.150/@effectOf.0 //@singleThreatCollection/@threats.151/@effectOf.0 //@singleThreatCollection/@threats.144/@effectOf.0 //@singleThreatCollection/@threats.149/@effectOf.0 //@singleThreatCollection/@threats.147/@effectOf.0 //@singleThreatCollection/@threats.148/@effectOf.0 //@singleThreatCollection/@threats.152/@effectOf.0 //@singleThreatCollection/@threats.146/@effectOf.0" id="14">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.2/@effectOf.0" effect="14" cause="12"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_OUD5gHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="15">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_aFh8cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.8 //@abstractThreatCollection/@threats.9" id="16">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_aFh8cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="17">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_aFh8cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="18">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="18" cause="14"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_aFh8cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" causeOf="//@singleThreatCollection/@threats.20/@effectOf.0" id="19">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="19" cause="20"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_aFh8cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.18/@effectOf.0" id="20">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_aFh8cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.2" causeOf="//@singleThreatCollection/@threats.57/@effectOf.1 //@singleThreatCollection/@threats.58/@effectOf.1 //@singleThreatCollection/@threats.118/@effectOf.1 //@singleThreatCollection/@threats.119/@effectOf.1 //@singleThreatCollection/@threats.10/@effectOf.0 //@singleThreatCollection/@threats.59/@effectOf.1 //@singleThreatCollection/@threats.135/@effectOf.1 //@singleThreatCollection/@threats.134/@effectOf.1 //@singleThreatCollection/@threats.136/@effectOf.1 //@singleThreatCollection/@threats.133/@effectOf.1 //@singleThreatCollection/@threats.145/@effectOf.1 //@singleThreatCollection/@threats.150/@effectOf.1 //@singleThreatCollection/@threats.151/@effectOf.1 //@singleThreatCollection/@threats.144/@effectOf.1 //@singleThreatCollection/@threats.149/@effectOf.1 //@singleThreatCollection/@threats.147/@effectOf.1 //@singleThreatCollection/@threats.148/@effectOf.1 //@singleThreatCollection/@threats.152/@effectOf.1 //@singleThreatCollection/@threats.146/@effectOf.1" id="21">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.2/@effectOf.0" effect="21" cause="19"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_aFh8cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.8" id="22">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_KioMEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="23">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="23" cause="24"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_KioMEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.26/@effectOf.1 //@singleThreatCollection/@threats.22/@effectOf.0" lef="2.25" id="24">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_KioMEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="25">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="25" cause="27"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="26">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.24/@effectOf.0" id="27">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="27" cause="30"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="27" cause="24"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.1" effect="27" cause="29"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="28">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" causeOf="//@singleThreatCollection/@threats.26/@effectOf.2" lef="2.25" id="29">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="29" cause="30"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.26/@effectOf.0 //@singleThreatCollection/@threats.28/@effectOf.0" lef="2.25" id="30">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_lG2cMHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.8" id="31">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_MKDc4HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="32">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="32" cause="33"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_MKDc4HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.35/@effectOf.1 //@singleThreatCollection/@threats.31/@effectOf.0" lef="2.25" id="33">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_MKDc4HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="34">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="34" cause="36"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="35">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.33/@effectOf.0" id="36">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="36" cause="39"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="36" cause="33"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.1" effect="36" cause="38"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="37">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" causeOf="//@singleThreatCollection/@threats.35/@effectOf.2" lef="2.25" id="38">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="38" cause="39"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.35/@effectOf.0 //@singleThreatCollection/@threats.37/@effectOf.0" lef="2.25" id="39">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_BbWzoHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.8" id="40">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.8" id="41">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.8" id="42">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="43">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="43" cause="46"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="44">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="44" cause="47"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="45">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="45" cause="48"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.54/@effectOf.0 //@singleThreatCollection/@threats.42/@effectOf.0" lef="2.25" id="46">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.55/@effectOf.0 //@singleThreatCollection/@threats.43/@effectOf.0" lef="2.25" id="47">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.56/@effectOf.0 //@singleThreatCollection/@threats.44/@effectOf.0" lef="2.25" id="48">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="49">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="49" cause="55"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="50">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="50" cause="56"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="51">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="51" cause="57"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="52">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="53">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="54">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.48/@effectOf.0" id="55">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="55" cause="46"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="55" cause="64"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.1" effect="55" cause="61"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.49/@effectOf.0" id="56">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="56" cause="47"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="56" cause="65"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.1" effect="56" cause="62"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.50/@effectOf.0" id="57">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="57" cause="48"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="57" cause="66"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.1" effect="57" cause="63"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="58">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="58" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="58" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="59">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="59" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="59" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="60">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="60" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="60" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" causeOf="//@singleThreatCollection/@threats.54/@effectOf.2" id="61">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="61" cause="64"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" causeOf="//@singleThreatCollection/@threats.55/@effectOf.2" id="62">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="62" cause="65"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" causeOf="//@singleThreatCollection/@threats.56/@effectOf.2" lef="2.25" id="63">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="63" cause="66"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.54/@effectOf.1 //@singleThreatCollection/@threats.60/@effectOf.0" id="64">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ngEg4HeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.55/@effectOf.1 //@singleThreatCollection/@threats.61/@effectOf.0" lef="2.25" id="65">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_wQi4AHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.56/@effectOf.1 //@singleThreatCollection/@threats.62/@effectOf.0" lef="2.25" id="66">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_0VZ0kHeCEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="67">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.0" effect="67" cause="7"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="68">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="68" cause="73"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="69">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="69" cause="74"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="70">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="70" cause="7"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="71">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="71" cause="7"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="72">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="72" cause="74"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.67/@effectOf.0" id="73">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.71/@effectOf.0 //@singleThreatCollection/@threats.68/@effectOf.0" id="74">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_UITF0HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="75">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="76">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.14" causeOf="//@singleThreatCollection/@threats.82/@effectOf.0" id="77">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="78">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="78" cause="82"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.9" id="79">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="80">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="81">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="81" cause="82"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.80/@effectOf.0 //@singleThreatCollection/@threats.77/@effectOf.0" id="82">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_oY37sHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.4" id="83">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.4/@effectOf.0" effect="83" cause="77"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_ZdPp4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="84">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="85">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="86">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="87">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="88">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="89">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="89" cause="103"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="90">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="90" cause="107"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="91">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="91" cause="108"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="92">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="93">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="94">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="95">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="96">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="97">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" directImpact="1.0" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="98">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="98" cause="104"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" directImpact="1.0" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="99">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="99" cause="105"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" directImpact="1.0" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="100">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="100" cause="106"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="101">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="101" cause="107"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="102">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="102" cause="108"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.88/@effectOf.0" id="103">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.114/@effectOf.1 //@singleThreatCollection/@threats.97/@effectOf.0" lef="2.25" indirectImpact="1.0" id="104">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.115/@effectOf.0 //@singleThreatCollection/@threats.98/@effectOf.0" lef="2.25" indirectImpact="1.0" id="105">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.116/@effectOf.1 //@singleThreatCollection/@threats.99/@effectOf.0" lef="2.25" indirectImpact="1.0" id="106">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.100/@effectOf.0 //@singleThreatCollection/@threats.89/@effectOf.0" id="107">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.101/@effectOf.0 //@singleThreatCollection/@threats.90/@effectOf.0" id="108">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="109">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="109" cause="115"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="110">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="110" cause="116"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="111">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="111" cause="117"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="112">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="113">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="114">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.108/@effectOf.0" id="115">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="115" cause="128"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="115" cause="104"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.109/@effectOf.0" id="116">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="116" cause="105"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="116" cause="129"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.110/@effectOf.0" id="117">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="117" cause="130"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="117" cause="106"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="118">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="119">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="119" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="119" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="120">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="120" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.1" effect="120" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.14" causeOf="//@singleThreatCollection/@threats.132/@effectOf.0" id="121">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="122">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="122" cause="131"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="123">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="123" cause="132"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.9" id="124">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="125">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="126">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="126" cause="131"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="127">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="127" cause="132"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" directImpact="1.0" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.114/@effectOf.0" lef="2.25" id="128">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_HcjL8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_VVElgHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" directImpact="1.0" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.115/@effectOf.1" lef="2.25" id="129">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_KioMEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_c2ehcHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" directImpact="1.0" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.116/@effectOf.0" lef="2.25" id="130">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_MKDc4HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_2h26gHeBEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.125/@effectOf.0 //@singleThreatCollection/@threats.121/@effectOf.0" id="131">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_5mWUUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.126/@effectOf.0 //@singleThreatCollection/@threats.122/@effectOf.0" id="132">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_9zcm4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.4" id="133">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.4/@effectOf.0" effect="133" cause="121"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_bOlzEHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_tfvu4HeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="134">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.0" effect="134" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.0" effect="134" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.10" lef="2.25" id="135">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.0" effect="135" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.0" effect="135" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="136">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.0" effect="136" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.0" effect="136" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="137">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.0" effect="137" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.10/@effectOf.0" effect="137" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="138">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="138" cause="158"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="139">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="139" cause="159"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_1F0j4KEOEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="140">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="140" cause="160"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_N1K9EKEQEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="141">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="141" cause="161"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_SUYUUHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="142">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="142" cause="162"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_YmFi8HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="143">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="143" cause="165"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="144">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="144" cause="166"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="145">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="145" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="145" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="146">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="146" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="146" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_1F0j4KEOEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="147">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="147" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="147" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_N1K9EKEQEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="148">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="148" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="148" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_SUYUUHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="149">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="149" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="149" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_YmFi8HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="150">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="150" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="150" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="151">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="151" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="151" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="152">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="152" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="152" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.7 //@abstractThreatCollection/@threats.8" id="153">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="153" cause="14"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.7/@effectOf.0" effect="153" cause="21"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" directImpact="1.0" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="154">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="154" cause="163"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" directImpact="1.0" instantiates="//@abstractThreatCollection/@threats.5" lef="2.25" id="155">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="155" cause="164"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="156">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="156" cause="165"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="157">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="157" cause="166"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.137/@effectOf.0" id="158">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.138/@effectOf.0" id="159">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_1F0j4KEOEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.139/@effectOf.0" id="160">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_N1K9EKEQEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.140/@effectOf.0" id="161">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_SUYUUHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.141/@effectOf.0" id="162">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_YmFi8HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.170/@effectOf.0 //@singleThreatCollection/@threats.153/@effectOf.0" lef="2.25" indirectImpact="1.0" id="163">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.171/@effectOf.1 //@singleThreatCollection/@threats.154/@effectOf.0" lef="2.25" indirectImpact="1.0" id="164">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.155/@effectOf.0 //@singleThreatCollection/@threats.142/@effectOf.0" id="165">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0 //@abstractThreatCollection/@threats.1" causeOf="//@singleThreatCollection/@threats.156/@effectOf.0 //@singleThreatCollection/@threats.143/@effectOf.0" id="166">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_SOXvwHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="167">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="167" cause="171"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.11" lef="2.25" id="168">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.11/@effectOf.0" effect="168" cause="172"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="169">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.6" id="170">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.166/@effectOf.0" id="171">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="171" cause="163"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="171" cause="199"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A2." instantiates="//@abstractThreatCollection/@threats.3" causeOf="//@singleThreatCollection/@threats.167/@effectOf.0" id="172">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="172" cause="200"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.3/@effectOf.0" effect="172" cause="164"/>
+      <threatenedElement xsi:type="securitydfd:DataFlow" href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="173">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="174">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_1F0j4KEOEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="175">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_N1K9EKEQEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="176">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_SUYUUHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." id="177">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_YmFi8HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="178">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.10" id="179">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.14" causeOf="//@singleThreatCollection/@threats.202/@effectOf.0" id="180">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.14" causeOf="//@singleThreatCollection/@threats.203/@effectOf.0" id="181">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_1F0j4KEOEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.14" causeOf="//@singleThreatCollection/@threats.204/@effectOf.0" id="182">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_N1K9EKEQEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.14" causeOf="//@singleThreatCollection/@threats.205/@effectOf.0" id="183">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_SUYUUHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.14" causeOf="//@singleThreatCollection/@threats.206/@effectOf.0" id="184">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_YmFi8HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="185">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="185" cause="201"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.12 //@abstractThreatCollection/@threats.13" id="186">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.12/@effectOf.0" effect="186" cause="202"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.9" id="187">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.9" id="188">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_1F0j4KEOEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.9" id="189">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_N1K9EKEQEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.9" id="190">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_SUYUUHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.6 //@abstractThreatCollection/@threats.9" id="191">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_YmFi8HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="192">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="193">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_1F0j4KEOEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="194">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_N1K9EKEQEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="195">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_SUYUUHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="196">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_YmFi8HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="197">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="197" cause="201"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.5" id="198">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.5/@effectOf.0" effect="198" cause="202"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.170/@effectOf.1" lef="2.25" id="199">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_J2xEQHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.171/@effectOf.0" lef="2.25" id="200">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:ExternalEntity" href="DocProc.securitydfd#_N--XIHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_D8gsUHeDEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.196/@effectOf.0 //@singleThreatCollection/@threats.184/@effectOf.0" id="201">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_Dr0vgHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A1." instantiates="//@abstractThreatCollection/@threats.0" causeOf="//@singleThreatCollection/@threats.197/@effectOf.0 //@singleThreatCollection/@threats.185/@effectOf.0" id="202">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <threatenedElement xsi:type="securitydfd:Process" href="DocProc.securitydfd#_P_qcgHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_GgU3cHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.4" id="203">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.4/@effectOf.0" effect="203" cause="180"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_LqSa4HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.4" id="204">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.4/@effectOf.0" effect="204" cause="181"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_1F0j4KEOEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.4" id="205">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.4/@effectOf.0" effect="205" cause="182"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_i4mRYHeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_N1K9EKEQEeu8Ku0FHazJFw"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.4" id="206">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.4/@effectOf.0" effect="206" cause="183"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_SUYUUHeEEeud_Ok1w7PbGQ"/>
+    </threats>
+    <threats xsi:type="sbtm:ConcreteInteractionThreat" Description="Not applicable due to A3." instantiates="//@abstractThreatCollection/@threats.4" id="207">
+      <threattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleConcreteThreatRelationship" instantiates="//@abstractThreatCollection/@threats.4/@effectOf.0" effect="207" cause="184"/>
+      <threatenedElement xsi:type="securitydfd:DataStore" href="DocProc.securitydfd#_l0Xe8HeAEeud_Ok1w7PbGQ"/>
+      <interaction href="DocProc.securitydfd#_YmFi8HeEEeud_Ok1w7PbGQ"/>
+    </threats>
+  </singleThreatCollection>
+  <abstractThreatCollection>
+    <threats xsi:type="sbtm:AbstractEntityThreat" causeOf="//@abstractThreatCollection/@threats.3/@effectOf.0 //@abstractThreatCollection/@threats.5/@effectOf.0 //@abstractThreatCollection/@threats.12/@effectOf.0" concreteInstances="48 158 160 20 46 105 130 30 108 103 13 161 162 39 33 165 24 166 159 6 47 132 65 128 201 104 163 199 200 106 164 82 66 129 64 107 73 131 202 74">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DFDElement"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractInteractionThreat" concreteInstances="48 47 158 160 104 163 106 164 46 107 105 73 108 103 161 162 33 165 24 166 74 159">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <senderContext xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DFDElement"/>
+      <recipientContext xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DFDElement"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" causeOf="//@abstractThreatCollection/@threats.7/@effectOf.0 //@abstractThreatCollection/@threats.10/@effectOf.0 //@abstractThreatCollection/@threats.10/@effectOf.1" concreteInstances="7 14 21">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.20/@effectOf.0 //@singleThreatCollection/@threats.6/@effectOf.0 //@singleThreatCollection/@threats.13/@effectOf.0" cause="//@abstractThreatCollection/@threats.13" effect="//@abstractThreatCollection/@threats.2" sameThreatenedElement="true">
+        <propagationmethod xsi:type="sbtm:SameFlow"/>
+      </effectOf>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.Process"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" causeOf="//@abstractThreatCollection/@threats.11/@effectOf.0" concreteInstances="27 117 116 55 36 171 56 172 57 115">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.56/@effectOf.0 //@singleThreatCollection/@threats.54/@effectOf.0 //@singleThreatCollection/@threats.115/@effectOf.0 //@singleThreatCollection/@threats.116/@effectOf.0 //@singleThreatCollection/@threats.26/@effectOf.0 //@singleThreatCollection/@threats.35/@effectOf.0 //@singleThreatCollection/@threats.35/@effectOf.1 //@singleThreatCollection/@threats.26/@effectOf.1 //@singleThreatCollection/@threats.55/@effectOf.0 //@singleThreatCollection/@threats.55/@effectOf.1 //@singleThreatCollection/@threats.114/@effectOf.0 //@singleThreatCollection/@threats.114/@effectOf.1 //@singleThreatCollection/@threats.170/@effectOf.0 //@singleThreatCollection/@threats.170/@effectOf.1 //@singleThreatCollection/@threats.171/@effectOf.0 //@singleThreatCollection/@threats.116/@effectOf.1 //@singleThreatCollection/@threats.171/@effectOf.1 //@singleThreatCollection/@threats.56/@effectOf.1 //@singleThreatCollection/@threats.115/@effectOf.1 //@singleThreatCollection/@threats.54/@effectOf.1" cause="//@abstractThreatCollection/@threats.0" effect="//@abstractThreatCollection/@threats.3">
+        <propagationmethod xsi:type="sbtm:SameFlow"/>
+      </effectOf>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.54/@effectOf.2 //@singleThreatCollection/@threats.55/@effectOf.2 //@singleThreatCollection/@threats.35/@effectOf.2 //@singleThreatCollection/@threats.26/@effectOf.2 //@singleThreatCollection/@threats.56/@effectOf.2" cause="//@abstractThreatCollection/@threats.12" effect="//@abstractThreatCollection/@threats.3">
+        <propagationmethod xsi:type="sbtm:SameFlow"/>
+      </effectOf>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DataFlow"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" concreteInstances="206 203 207 204 133 205 83">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.202/@effectOf.0 //@singleThreatCollection/@threats.203/@effectOf.0 //@singleThreatCollection/@threats.82/@effectOf.0 //@singleThreatCollection/@threats.206/@effectOf.0 //@singleThreatCollection/@threats.204/@effectOf.0 //@singleThreatCollection/@threats.205/@effectOf.0 //@singleThreatCollection/@threats.132/@effectOf.0" cause="//@abstractThreatCollection/@threats.14" effect="//@abstractThreatCollection/@threats.4" sameThreatenedElement="true">
+        <propagationmethod xsi:type="sbtm:SameFlow"/>
+      </effectOf>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DataStore"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" concreteInstances="157 100 156 192 10 101 45 127 23 126 196 198 197 72 154 3 194 98 17 155 193 32 44 80 81 43 102 195 99 125">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.44/@effectOf.0 //@singleThreatCollection/@threats.42/@effectOf.0 //@singleThreatCollection/@threats.98/@effectOf.0 //@singleThreatCollection/@threats.101/@effectOf.0 //@singleThreatCollection/@threats.31/@effectOf.0 //@singleThreatCollection/@threats.155/@effectOf.0 //@singleThreatCollection/@threats.22/@effectOf.0 //@singleThreatCollection/@threats.156/@effectOf.0 //@singleThreatCollection/@threats.43/@effectOf.0 //@singleThreatCollection/@threats.126/@effectOf.0 //@singleThreatCollection/@threats.196/@effectOf.0 //@singleThreatCollection/@threats.97/@effectOf.0 //@singleThreatCollection/@threats.153/@effectOf.0 //@singleThreatCollection/@threats.99/@effectOf.0 //@singleThreatCollection/@threats.154/@effectOf.0 //@singleThreatCollection/@threats.80/@effectOf.0 //@singleThreatCollection/@threats.100/@effectOf.0 //@singleThreatCollection/@threats.125/@effectOf.0 //@singleThreatCollection/@threats.197/@effectOf.0 //@singleThreatCollection/@threats.71/@effectOf.0" cause="//@abstractThreatCollection/@threats.0" effect="//@abstractThreatCollection/@threats.5" sameThreatenedElement="true">
+        <propagationmethod xsi:type="sbtm:SameFlow"/>
+      </effectOf>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DFDElement"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" concreteInstances="189 94 79 22 95 188 96 151 71 93 124 97 145 9 35 113 170 148 149 169 40 53 92 2 54 52 16 191 112 114 146 152 150 31 190 153 42 187 147 26 70 41">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DFDElement"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" concreteInstances="94 95 146 96 151 71 93 152 97 145 150 148 149 153 147 92 70">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.70/@effectOf.0 //@singleThreatCollection/@threats.69/@effectOf.0 //@singleThreatCollection/@threats.145/@effectOf.0 //@singleThreatCollection/@threats.150/@effectOf.0 //@singleThreatCollection/@threats.151/@effectOf.0 //@singleThreatCollection/@threats.144/@effectOf.0 //@singleThreatCollection/@threats.149/@effectOf.0 //@singleThreatCollection/@threats.147/@effectOf.0 //@singleThreatCollection/@threats.148/@effectOf.0 //@singleThreatCollection/@threats.152/@effectOf.0 //@singleThreatCollection/@threats.146/@effectOf.0 //@singleThreatCollection/@threats.145/@effectOf.1 //@singleThreatCollection/@threats.150/@effectOf.1 //@singleThreatCollection/@threats.151/@effectOf.1 //@singleThreatCollection/@threats.144/@effectOf.1 //@singleThreatCollection/@threats.149/@effectOf.1 //@singleThreatCollection/@threats.147/@effectOf.1 //@singleThreatCollection/@threats.148/@effectOf.1 //@singleThreatCollection/@threats.152/@effectOf.1 //@singleThreatCollection/@threats.146/@effectOf.1" cause="//@abstractThreatCollection/@threats.2" effect="//@abstractThreatCollection/@threats.7" sameThreatenedElement="true">
+        <propagationmethod xsi:type="sbtm:AllOutgoingMessages"/>
+      </effectOf>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.Process"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractInteractionThreat" concreteInstances="94 22 95 96 151 71 93 97 145 9 148 149 40 92 2 16 146 152 150 31 153 42 147 70 41">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <senderContext xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DFDElement"/>
+      <recipientContext xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DFDElement"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" concreteInstances="189 79 191 188 190 187 124 2 9 16">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DataStore"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" concreteInstances="136 18 135 137 85 28 58 59 84 37 67 88 134 178 87 119 120 86 76 11 4 179 60">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.66/@effectOf.0 //@singleThreatCollection/@threats.135/@effectOf.0 //@singleThreatCollection/@threats.134/@effectOf.0 //@singleThreatCollection/@threats.136/@effectOf.0 //@singleThreatCollection/@threats.133/@effectOf.0 //@singleThreatCollection/@threats.135/@effectOf.1 //@singleThreatCollection/@threats.134/@effectOf.1 //@singleThreatCollection/@threats.136/@effectOf.1 //@singleThreatCollection/@threats.133/@effectOf.1" cause="//@abstractThreatCollection/@threats.2" effect="//@abstractThreatCollection/@threats.10" sameThreatenedElement="true">
+        <propagationmethod xsi:type="sbtm:AllOutgoingMessages"/>
+      </effectOf>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.17/@effectOf.0 //@singleThreatCollection/@threats.57/@effectOf.0 //@singleThreatCollection/@threats.58/@effectOf.0 //@singleThreatCollection/@threats.118/@effectOf.0 //@singleThreatCollection/@threats.119/@effectOf.0 //@singleThreatCollection/@threats.59/@effectOf.0 //@singleThreatCollection/@threats.57/@effectOf.1 //@singleThreatCollection/@threats.58/@effectOf.1 //@singleThreatCollection/@threats.118/@effectOf.1 //@singleThreatCollection/@threats.119/@effectOf.1 //@singleThreatCollection/@threats.10/@effectOf.0 //@singleThreatCollection/@threats.59/@effectOf.1" cause="//@abstractThreatCollection/@threats.2" effect="//@abstractThreatCollection/@threats.10" sameThreatenedElement="true">
+        <propagationmethod xsi:type="sbtm:AllIncomingMessages"/>
+      </effectOf>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.Process"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" concreteInstances="25 34 110 50 111 168 49 167 51 109">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxRck2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.24/@effectOf.0 //@singleThreatCollection/@threats.110/@effectOf.0 //@singleThreatCollection/@threats.109/@effectOf.0 //@singleThreatCollection/@threats.48/@effectOf.0 //@singleThreatCollection/@threats.33/@effectOf.0 //@singleThreatCollection/@threats.166/@effectOf.0 //@singleThreatCollection/@threats.49/@effectOf.0 //@singleThreatCollection/@threats.167/@effectOf.0 //@singleThreatCollection/@threats.50/@effectOf.0 //@singleThreatCollection/@threats.108/@effectOf.0" cause="//@abstractThreatCollection/@threats.3" effect="//@abstractThreatCollection/@threats.11" sameThreatenedElement="true">
+        <propagationmethod xsi:type="sbtm:SameFlow"/>
+      </effectOf>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DataFlow"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" causeOf="//@abstractThreatCollection/@threats.3/@effectOf.1" concreteInstances="68 61 181 19 69 140 183 89 62 5 38 186 141 122 184 182 138 78 142 123 77 185 29 91 90 12 180 143 144 139 63 121">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <effectOf xsi:type="sbtm:SingleAbstractThreatRelationship" rationale="" concreteInstances="//@singleThreatCollection/@threats.137/@effectOf.0 //@singleThreatCollection/@threats.139/@effectOf.0 //@singleThreatCollection/@threats.18/@effectOf.0 //@singleThreatCollection/@threats.28/@effectOf.0 //@singleThreatCollection/@threats.90/@effectOf.0 //@singleThreatCollection/@threats.88/@effectOf.0 //@singleThreatCollection/@threats.11/@effectOf.0 //@singleThreatCollection/@threats.140/@effectOf.0 //@singleThreatCollection/@threats.141/@effectOf.0 //@singleThreatCollection/@threats.37/@effectOf.0 //@singleThreatCollection/@threats.142/@effectOf.0 //@singleThreatCollection/@threats.143/@effectOf.0 //@singleThreatCollection/@threats.138/@effectOf.0 //@singleThreatCollection/@threats.4/@effectOf.0 //@singleThreatCollection/@threats.122/@effectOf.0 //@singleThreatCollection/@threats.61/@effectOf.0 //@singleThreatCollection/@threats.184/@effectOf.0 //@singleThreatCollection/@threats.77/@effectOf.0 //@singleThreatCollection/@threats.62/@effectOf.0 //@singleThreatCollection/@threats.60/@effectOf.0 //@singleThreatCollection/@threats.89/@effectOf.0 //@singleThreatCollection/@threats.67/@effectOf.0 //@singleThreatCollection/@threats.121/@effectOf.0 //@singleThreatCollection/@threats.185/@effectOf.0 //@singleThreatCollection/@threats.68/@effectOf.0" cause="//@abstractThreatCollection/@threats.0" effect="//@abstractThreatCollection/@threats.12" sameThreatenedElement="true">
+        <propagationmethod xsi:type="sbtm:SameFlow"/>
+      </effectOf>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DFDElement"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" causeOf="//@abstractThreatCollection/@threats.2/@effectOf.0" concreteInstances="68 61 19 69 140 89 62 5 38 186 141 122 138 78 142 123 185 29 91 90 12 143 144 139 63">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.Process"/>
+    </threats>
+    <threats xsi:type="sbtm:AbstractEntityThreat" causeOf="//@abstractThreatCollection/@threats.4/@effectOf.0" concreteInstances="180 181 77 184 182 183 121">
+      <abstractthreattype xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <dataflowentity xsi:type="sbtm:AbstractParticipantContext" entityType="be.kuleuven.cs.distrinet.sparta.securitydfd.DataStore"/>
+    </threats>
+  </abstractThreatCollection>
+</sbtm:SBTMModel>

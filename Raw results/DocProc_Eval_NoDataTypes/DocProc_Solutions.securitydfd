@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<securitydfd:SolutionTypeCatalog xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:securitydfd="http://security.distrinet.cs.kuleuven.be/securitydfd" xmi:id="_-AsoMHgREeuyD-Yn_PBFTg">
+  <solutionTypes xmi:id="_qQo0AG9_EeuG8uRD5cUmpg" name="User authentication">
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_uTLcYG9_EeuG8uRD5cUmpg" name="AuthN Process" subjected="_43beQG9_EeuG8uRD5cUmpg">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.Process</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_u3g4gG9_EeuG8uRD5cUmpg" name="User Credentials">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.DataStore</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_GnOnUKEeEeuR1dWTmsja_g" name="Registration Process">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.Process</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_Ly2XoKEeEeuR1dWTmsja_g" name="Registration Flow">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.DataFlow</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_PhwSUKEeEeuR1dWTmsja_g" name="Authenticated Flow">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.DataFlow</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <countermeasure xmi:id="_43beQG9_EeuG8uRD5cUmpg" name="User Authentication" scope="_PhwSUKEeEeuR1dWTmsja_g" subject="_uTLcYG9_EeuG8uRD5cUmpg">
+      <mitigates xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <difficulty xmi:id="_hiWTUHAxEeuiKr2-gPPpAA" minimum="2000.0" probable="3000.0" maximum="4000.0" confidence="100.0" name="AuthN"/>
+    </countermeasure>
+  </solutionTypes>
+  <solutionTypes xmi:id="_ZBkbsKEeEeuR1dWTmsja_g" name="URL Authorization">
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_c9FPAKEeEeuR1dWTmsja_g" name="Authorization process" subjected="_UR5yIKEfEeuR1dWTmsja_g">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.Process</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_vcH9MKEeEeuR1dWTmsja_g" name="Authorized flow">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.DataFlow</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <countermeasure xmi:id="_UR5yIKEfEeuR1dWTmsja_g" name="URL AuthZ" scope="_vcH9MKEeEeuR1dWTmsja_g" subject="_c9FPAKEeEeuR1dWTmsja_g">
+      <mitigates xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <difficulty xmi:id="_e8Y-4KEfEeuR1dWTmsja_g" minimum="2000.0" probable="3000.0" maximum="4000.0" confidence="100.0" name="AuthZ"/>
+    </countermeasure>
+  </solutionTypes>
+  <solutionTypes xmi:id="_6rEh4KEeEeuR1dWTmsja_g" name="Access Control">
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_-G-oEKEeEeuR1dWTmsja_g" name="Authorization Process" subjected="_jK0uMKEfEeuR1dWTmsja_g">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.Process</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_B9N50KEfEeuR1dWTmsja_g" name="ACP Data Store">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.DataStore</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_IMjJ4KEfEeuR1dWTmsja_g" name="Authorized Flow">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.DataFlow</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+    </roles>
+    <countermeasure xmi:id="_jK0uMKEfEeuR1dWTmsja_g" name="ACP AuthZ" scope="_IMjJ4KEfEeuR1dWTmsja_g" subject="_-G-oEKEeEeuR1dWTmsja_g">
+      <mitigates xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UVYCMk2EeeheeqXVGLgxA"/>
+      <difficulty xmi:id="_lQVpMKEfEeuR1dWTmsja_g" minimum="2000.0" probable="3000.0" maximum="4000.0" confidence="100.0" name="Access Control"/>
+    </countermeasure>
+  </solutionTypes>
+  <solutionTypes xmi:id="_tuYMgKEfEeuR1dWTmsja_g" name="Delivery Logging">
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_xvUSYKEfEeuR1dWTmsja_g" name="Logged Event">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.DataFlow</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_2GFeUKEfEeuR1dWTmsja_g" name="Logger Process">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.Process</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_Ch314KGqEeu9e7WeB1Gkyg" name="Logs">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.DataStore</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <roles xsi:type="securitydfd:ProtectedRole" xmi:id="_ryqgwKGuEeu9e7WeB1Gkyg" name="Main Process" subjected="_K8tUMKGqEeu9e7WeB1Gkyg" protectionScope="_xvUSYKEfEeuR1dWTmsja_g">
+      <bindingTypes>be.kuleuven.cs.distrinet.sparta.securitydfd.Process</bindingTypes>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUJ4ck2EeeheeqXVGLgxA"/>
+      <protectedFrom xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </roles>
+    <countermeasure xmi:id="_K8tUMKGqEeu9e7WeB1Gkyg" name="Logging" scope="_xvUSYKEfEeuR1dWTmsja_g" subject="_ryqgwKGuEeu9e7WeB1Gkyg">
+      <mitigates xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUw8ck2EeeheeqXVGLgxA"/>
+      <difficulty xmi:id="_L1jAsKGqEeu9e7WeB1Gkyg" minimum="2000.0" probable="3000.0" maximum="4000.0" confidence="100.0" name="Logging"/>
+    </countermeasure>
+  </solutionTypes>
+</securitydfd:SolutionTypeCatalog>

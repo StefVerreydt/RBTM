@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<securitydfd:DFDModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:securitydfd="http://security.distrinet.cs.kuleuven.be/securitydfd" xmi:id="_-JoPEHd_Eeud_Ok1w7PbGQ">
+  <containedElements xsi:type="securitydfd:TrustBoundaryContainer" xmi:id="_Fot20HeAEeud_Ok1w7PbGQ" name="DocProc">
+    <containedElements xsi:type="securitydfd:Process" xmi:id="_P_qcgHeAEeud_Ok1w7PbGQ" name="P2. delivery manager" bound="_rokmEKGtEeu9e7WeB1Gkyg _zfiiUKGtEeu9e7WeB1Gkyg _6dM4AKGtEeu9e7WeB1Gkyg _kPtssKGuEeu9e7WeB1Gkyg _4ShTsKGuEeu9e7WeB1Gkyg _5iQdQKGuEeu9e7WeB1Gkyg" send="_VVElgHeBEeud_Ok1w7PbGQ _c2ehcHeBEeud_Ok1w7PbGQ _2h26gHeBEeud_Ok1w7PbGQ _tfvu4HeDEeud_Ok1w7PbGQ _5mWUUHeDEeud_Ok1w7PbGQ _9zcm4HeDEeud_Ok1w7PbGQ" receive="_lG2cMHeBEeud_Ok1w7PbGQ _BbWzoHeCEeud_Ok1w7PbGQ _oY37sHeDEeud_Ok1w7PbGQ _Dr0vgHeEEeud_Ok1w7PbGQ _GgU3cHeEEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaCLJvEeuv35F53pfy7g" value="_GEkaB7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaCrJvEeuv35F53pfy7g" value="_GEkaCbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ0LJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaB7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaCbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:Process" xmi:id="_SOXvwHeAEeud_Ok1w7PbGQ" name="P3. PDS" bound="_yLeRMHgSEeuyD-Yn_PBFTg _gtuwgKGqEeu9e7WeB1Gkyg _E4iD4KGtEeu9e7WeB1Gkyg _SBuuwKGtEeu9e7WeB1Gkyg _76Bl4KGuEeu9e7WeB1Gkyg _9_Pl8KGuEeu9e7WeB1Gkyg" send="_D8gsUHeDEeud_Ok1w7PbGQ _J2xEQHeDEeud_Ok1w7PbGQ _Dr0vgHeEEeud_Ok1w7PbGQ _GgU3cHeEEeud_Ok1w7PbGQ _LqSa4HeEEeud_Ok1w7PbGQ _SUYUUHeEEeud_Ok1w7PbGQ _YmFi8HeEEeud_Ok1w7PbGQ _1F0j4KEOEeu8Ku0FHazJFw _N1K9EKEQEeu8Ku0FHazJFw" receive="_ngEg4HeCEeud_Ok1w7PbGQ _wQi4AHeCEeud_Ok1w7PbGQ _0VZ0kHeCEeud_Ok1w7PbGQ _5mWUUHeDEeud_Ok1w7PbGQ _9zcm4HeDEeud_Ok1w7PbGQ _OUD5gHeEEeud_Ok1w7PbGQ _aFh8cHeEEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaJLJvEeuv35F53pfy7g" value="_GEkaI7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaJrJvEeuv35F53pfy7g" value="_GEkaJbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ0bJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaI7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaJbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:Process" xmi:id="_UITF0HeAEeud_Ok1w7PbGQ" name="P1. document scheduler" send="_ZdPp4HeDEeud_Ok1w7PbGQ _oY37sHeDEeud_Ok1w7PbGQ" receive="_b-68cHeDEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GElA8bJvEeuv35F53pfy7g" value="_GElA8LJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GElA87JvEeuv35F53pfy7g" value="_GElA8rJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ0rJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GElA8LJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GElA8rJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataStore" xmi:id="_bOlzEHeAEeud_Ok1w7PbGQ" name="DS1. generated docs archive" bound="_r7vZsKGtEeu9e7WeB1Gkyg _zus_sKGtEeu9e7WeB1Gkyg _6qWjMKGtEeu9e7WeB1Gkyg _kfl7wKGuEeu9e7WeB1Gkyg" send="_b-68cHeDEeud_Ok1w7PbGQ" receive="_ZdPp4HeDEeud_Ok1w7PbGQ _tfvu4HeDEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaFLJvEeuv35F53pfy7g" value="_GEkaE7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaFrJvEeuv35F53pfy7g" value="_GEkaFbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ07JvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaE7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaFbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataStore" xmi:id="_i4mRYHeAEeud_Ok1w7PbGQ" name="DS2. PDS docs" bound="_FOMK0KGtEeu9e7WeB1Gkyg" send="_OUD5gHeEEeud_Ok1w7PbGQ" receive="_LqSa4HeEEeud_Ok1w7PbGQ _1F0j4KEOEeu8Ku0FHazJFw _N1K9EKEQEeu8Ku0FHazJFw">
+      <lossMagnitude xmi:id="_GEkaKLJvEeuv35F53pfy7g" value="_GEkaJ7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaKrJvEeuv35F53pfy7g" value="_GEkaKbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ1LJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaJ7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaKbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataStore" xmi:id="_l0Xe8HeAEeud_Ok1w7PbGQ" name="DS3. PDS user data" bound="_8olwUHgSEeuyD-Yn_PBFTg" send="_aFh8cHeEEeud_Ok1w7PbGQ" receive="_SUYUUHeEEeud_Ok1w7PbGQ _YmFi8HeEEeud_Ok1w7PbGQ">
+      <estimates xmi:id="_GEkZ1bJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_VVElgHeBEeud_Ok1w7PbGQ" name="DF1. batch of docs with delivery info" sender="_P_qcgHeAEeud_Ok1w7PbGQ" recipient="_HcjL8HeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaBLJvEeuv35F53pfy7g" value="_GEkaA7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaBrJvEeuv35F53pfy7g" value="_GEkaBbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ1rJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaA7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaBbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_c2ehcHeBEeud_Ok1w7PbGQ" name="DF2. batch of docs with delivery info" sender="_P_qcgHeAEeud_Ok1w7PbGQ" recipient="_KioMEHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkZ-LJvEeuv35F53pfy7g" value="_GEkZ97JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkZ-rJvEeuv35F53pfy7g" value="_GEkZ-bJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ17JvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkZ97JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkZ-bJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_2h26gHeBEeud_Ok1w7PbGQ" name="DF4. PDF or URL with delivery info" sender="_P_qcgHeAEeud_Ok1w7PbGQ" recipient="_MKDc4HeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GElA9bJvEeuv35F53pfy7g" value="_GElA9LJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GElA97JvEeuv35F53pfy7g" value="_GElA9rJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ2LJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GElA9LJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GElA9rJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_D8gsUHeDEeud_Ok1w7PbGQ" name="DF9. requested document" sender="_SOXvwHeAEeud_Ok1w7PbGQ" recipient="_N--XIHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaILJvEeuv35F53pfy7g" value="_GEkaH7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaIrJvEeuv35F53pfy7g" value="_GEkaIbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ2bJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaH7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaIbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_J2xEQHeDEeud_Ok1w7PbGQ" name="DF10. requested doc" sender="_SOXvwHeAEeud_Ok1w7PbGQ" recipient="_N--XIHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkZ_LJvEeuv35F53pfy7g" value="_GEkZ-7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkZ_rJvEeuv35F53pfy7g" value="_GEkZ_bJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ2rJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkZ-7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkZ_bJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_ZdPp4HeDEeud_Ok1w7PbGQ" name="DF11. doc ID" sender="_UITF0HeAEeud_Ok1w7PbGQ" recipient="_bOlzEHeAEeud_Ok1w7PbGQ">
+      <estimates xmi:id="_GEkZ27JvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_b-68cHeDEeud_Ok1w7PbGQ" name="DF12. generated document + delivery info" sender="_bOlzEHeAEeud_Ok1w7PbGQ" recipient="_UITF0HeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkZ9LJvEeuv35F53pfy7g" value="_GEkZ87JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkZ9rJvEeuv35F53pfy7g" value="_GEkZ9bJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ3LJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkZ87JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkZ9bJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_oY37sHeDEeud_Ok1w7PbGQ" name="DF13. document + delivery info" sender="_UITF0HeAEeud_Ok1w7PbGQ" recipient="_P_qcgHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GElA6bJvEeuv35F53pfy7g" value="_GElA6LJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GElA67JvEeuv35F53pfy7g" value="_GElA6rJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ3bJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GElA6LJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GElA6rJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_tfvu4HeDEeud_Ok1w7PbGQ" name="DF14. doc ID + delivery status" sender="_P_qcgHeAEeud_Ok1w7PbGQ" recipient="_bOlzEHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaHLJvEeuv35F53pfy7g" value="_GEkaG7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaHrJvEeuv35F53pfy7g" value="_GEkaHbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ3rJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaG7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaHbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_5mWUUHeDEeud_Ok1w7PbGQ" name="DF15. doc" sender="_P_qcgHeAEeud_Ok1w7PbGQ" recipient="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaGLJvEeuv35F53pfy7g" value="_GEkaF7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaGrJvEeuv35F53pfy7g" value="_GEkaGbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ37JvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaF7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaGbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_9zcm4HeDEeud_Ok1w7PbGQ" name="DF16. doc + user ID" sender="_P_qcgHeAEeud_Ok1w7PbGQ" recipient="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaMLJvEeuv35F53pfy7g" value="_GEkaL7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaMrJvEeuv35F53pfy7g" value="_GEkaMbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ4LJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaL7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaMbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_Dr0vgHeEEeud_Ok1w7PbGQ" name="DF17. delivery status + doc ID" sender="_SOXvwHeAEeud_Ok1w7PbGQ" recipient="_P_qcgHeAEeud_Ok1w7PbGQ">
+      <estimates xmi:id="_GEkZ4bJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_GgU3cHeEEeud_Ok1w7PbGQ" name="DF18. URL" sender="_SOXvwHeAEeud_Ok1w7PbGQ" recipient="_P_qcgHeAEeud_Ok1w7PbGQ">
+      <estimates xmi:id="_GEkZ4rJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_LqSa4HeEEeud_Ok1w7PbGQ" name="DF19. doc ID" sender="_SOXvwHeAEeud_Ok1w7PbGQ" recipient="_i4mRYHeAEeud_Ok1w7PbGQ">
+      <estimates xmi:id="_GEkZ47JvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_OUD5gHeEEeud_Ok1w7PbGQ" name="DF20. requested document" sender="_i4mRYHeAEeud_Ok1w7PbGQ" recipient="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaALJvEeuv35F53pfy7g" value="_GEkZ_7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaArJvEeuv35F53pfy7g" value="_GEkaAbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ5LJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkZ_7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaAbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_SUYUUHeEEeud_Ok1w7PbGQ" name="DF21. new user info (email, name, address, password)" sender="_SOXvwHeAEeud_Ok1w7PbGQ" recipient="_l0Xe8HeAEeud_Ok1w7PbGQ">
+      <estimates xmi:id="_GEkZ5bJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_YmFi8HeEEeud_Ok1w7PbGQ" name="DF22. user ID" sender="_SOXvwHeAEeud_Ok1w7PbGQ" recipient="_l0Xe8HeAEeud_Ok1w7PbGQ">
+      <estimates xmi:id="_GEkZ5rJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_aFh8cHeEEeud_Ok1w7PbGQ" name="DF23. login credentials" sender="_l0Xe8HeAEeud_Ok1w7PbGQ" recipient="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <estimates xmi:id="_GEkZ57JvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_1F0j4KEOEeu8Ku0FHazJFw" name="DF24. doc + user ID" sender="_SOXvwHeAEeud_Ok1w7PbGQ" recipient="_i4mRYHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaELJvEeuv35F53pfy7g" value="_GEkaD7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaErJvEeuv35F53pfy7g" value="_GEkaEbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ6LJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaD7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaEbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+    <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_N1K9EKEQEeu8Ku0FHazJFw" name="DF25. doc" sender="_SOXvwHeAEeud_Ok1w7PbGQ" recipient="_i4mRYHeAEeud_Ok1w7PbGQ">
+      <lossMagnitude xmi:id="_GEkaLLJvEeuv35F53pfy7g" value="_GEkaK7JvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <lossMagnitude xmi:id="_GEkaLrJvEeuv35F53pfy7g" value="_GEkaLbJvEeuv35F53pfy7g">
+        <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+      </lossMagnitude>
+      <estimates xmi:id="_GEkZ6bJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+      <estimates xmi:id="_GEkaK7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+      <estimates xmi:id="_GEkaLbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+    </containedElements>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:ExternalEntity" xmi:id="_HcjL8HeAEeud_Ok1w7PbGQ" name="E1. print service" receive="_VVElgHeBEeud_Ok1w7PbGQ">
+    <lossMagnitude xmi:id="_GElA7bJvEeuv35F53pfy7g" value="_GElA7LJvEeuv35F53pfy7g">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <lossMagnitude xmi:id="_GElA77JvEeuv35F53pfy7g" value="_GElA7rJvEeuv35F53pfy7g">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <estimates xmi:id="_GEkZ6rJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    <estimates xmi:id="_GElA7LJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+    <estimates xmi:id="_GElA7rJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:ExternalEntity" xmi:id="_KioMEHeAEeud_Ok1w7PbGQ" name="E2. zoomit" send="_lG2cMHeBEeud_Ok1w7PbGQ" receive="_c2ehcHeBEeud_Ok1w7PbGQ">
+    <lossMagnitude xmi:id="_GElA5bJvEeuv35F53pfy7g" value="_GElA5LJvEeuv35F53pfy7g">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <lossMagnitude xmi:id="_GElA57JvEeuv35F53pfy7g" value="_GElA5rJvEeuv35F53pfy7g">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <estimates xmi:id="_GEkZ67JvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    <estimates xmi:id="_GElA5LJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+    <estimates xmi:id="_GElA5rJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:ExternalEntity" xmi:id="_MKDc4HeAEeud_Ok1w7PbGQ" name="E3. email provider" send="_BbWzoHeCEeud_Ok1w7PbGQ" receive="_2h26gHeBEeud_Ok1w7PbGQ">
+    <lossMagnitude xmi:id="_GEkaDLJvEeuv35F53pfy7g" value="_GEkaC7JvEeuv35F53pfy7g">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <lossMagnitude xmi:id="_GEkaDrJvEeuv35F53pfy7g" value="_GEkaDbJvEeuv35F53pfy7g">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <estimates xmi:id="_GEkZ7LJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    <estimates xmi:id="_GEkaC7JvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+    <estimates xmi:id="_GEkaDbJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:ExternalEntity" xmi:id="_N--XIHeAEeud_Ok1w7PbGQ" name="E4. PDS user" send="_ngEg4HeCEeud_Ok1w7PbGQ _wQi4AHeCEeud_Ok1w7PbGQ _0VZ0kHeCEeud_Ok1w7PbGQ" receive="_D8gsUHeDEeud_Ok1w7PbGQ _J2xEQHeDEeud_Ok1w7PbGQ">
+    <lossMagnitude xmi:id="_GElA4bJvEeuv35F53pfy7g" value="_GElA4LJvEeuv35F53pfy7g">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUKC8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <lossMagnitude xmi:id="_GElA47JvEeuv35F53pfy7g" value="_GElA4rJvEeuv35F53pfy7g">
+      <key xsi:type="securitydfd:ThreatType" href="ThreatCatalog.securitydfd#_8UUxG8k2EeeheeqXVGLgxA"/>
+    </lossMagnitude>
+    <estimates xmi:id="_GEkZ7bJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+    <estimates xmi:id="_GElA4LJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Integrity"/>
+    <estimates xmi:id="_GElA4rJvEeuv35F53pfy7g" minimum="2.0" probable="2.0" maximum="2.0" confidence="100.0" name="PDS Doc Confidentiality"/>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_lG2cMHeBEeud_Ok1w7PbGQ" name="DF3. delivery status + doc ID" bound="_rYMnwKGtEeu9e7WeB1Gkyg" sender="_KioMEHeAEeud_Ok1w7PbGQ" recipient="_P_qcgHeAEeud_Ok1w7PbGQ">
+    <estimates xmi:id="_GEkZ7rJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_BbWzoHeCEeud_Ok1w7PbGQ" name="DF5. delivery status + doc ID" bound="_zRthsKGtEeu9e7WeB1Gkyg" sender="_MKDc4HeAEeud_Ok1w7PbGQ" recipient="_P_qcgHeAEeud_Ok1w7PbGQ">
+    <estimates xmi:id="_GEkZ77JvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_ngEg4HeCEeud_Ok1w7PbGQ" name="DF6. login cred + doc ID" bound="_g_w7sKGqEeu9e7WeB1Gkyg _Eqzw8KGtEeu9e7WeB1Gkyg _6L7h0KGtEeu9e7WeB1Gkyg" sender="_N--XIHeAEeud_Ok1w7PbGQ" recipient="_SOXvwHeAEeud_Ok1w7PbGQ">
+    <estimates xmi:id="_GEkZ8LJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_wQi4AHeCEeud_Ok1w7PbGQ" name="DF7. URL" bound="_RxPbsKGtEeu9e7WeB1Gkyg _j-nVoKGuEeu9e7WeB1Gkyg" sender="_N--XIHeAEeud_Ok1w7PbGQ" recipient="_SOXvwHeAEeud_Ok1w7PbGQ">
+    <estimates xmi:id="_GEkZ8bJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:DataFlow" xmi:id="_0VZ0kHeCEeud_Ok1w7PbGQ" name="DF8. new user info (email, name, address, password)" bound="_hRgL8KGqEeu9e7WeB1Gkyg" sender="_N--XIHeAEeud_Ok1w7PbGQ" recipient="_SOXvwHeAEeud_Ok1w7PbGQ">
+    <estimates xmi:id="_GEkZ8rJvEeuv35F53pfy7g" confidence="100.0" name="Zero estimate"/>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:Solution" xmi:id="_rjXUwHgSEeuyD-Yn_PBFTg" name="PDS user authentication">
+    <securitypattern href="DocProc_Solutions.securitydfd#_qQo0AG9_EeuG8uRD5cUmpg"/>
+    <rolebinding xmi:id="_yLeRMHgSEeuyD-Yn_PBFTg" name="AuthN Process" bindsTo="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_uTLcYG9_EeuG8uRD5cUmpg"/>
+    </rolebinding>
+    <rolebinding xmi:id="_8olwUHgSEeuyD-Yn_PBFTg" name="User Credentials" bindsTo="_l0Xe8HeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_u3g4gG9_EeuG8uRD5cUmpg"/>
+    </rolebinding>
+    <rolebinding xmi:id="_gtuwgKGqEeu9e7WeB1Gkyg" name="Registration Process" bindsTo="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_GnOnUKEeEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_g_w7sKGqEeu9e7WeB1Gkyg" name="Authenticated Flow" bindsTo="_ngEg4HeCEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_PhwSUKEeEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_hRgL8KGqEeu9e7WeB1Gkyg" name="Registration Flow" bindsTo="_0VZ0kHeCEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_Ly2XoKEeEeuR1dWTmsja_g"/>
+    </rolebinding>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:Solution" xmi:id="_AUq3IKGtEeu9e7WeB1Gkyg" name="PDS authorization: Access Control" description="">
+    <securitypattern href="DocProc_Solutions.securitydfd#_6rEh4KEeEeuR1dWTmsja_g"/>
+    <rolebinding xmi:id="_Eqzw8KGtEeu9e7WeB1Gkyg" name="Authorized Flow" bindsTo="_ngEg4HeCEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_IMjJ4KEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_E4iD4KGtEeu9e7WeB1Gkyg" name="Authorization Process" bindsTo="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_-G-oEKEeEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_FOMK0KGtEeu9e7WeB1Gkyg" name="ACP Data Store" bindsTo="_i4mRYHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_B9N50KEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:Solution" xmi:id="_PLL_cKGtEeu9e7WeB1Gkyg" name="PDS authorization: URL">
+    <securitypattern href="DocProc_Solutions.securitydfd#_ZBkbsKEeEeuR1dWTmsja_g"/>
+    <rolebinding xmi:id="_RxPbsKGtEeu9e7WeB1Gkyg" name="Authorized flow" bindsTo="_wQi4AHeCEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_vcH9MKEeEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_SBuuwKGtEeu9e7WeB1Gkyg" name="Authorization process" bindsTo="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_c9FPAKEeEeuR1dWTmsja_g"/>
+    </rolebinding>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:Solution" xmi:id="_f51uEKGtEeu9e7WeB1Gkyg" name="Delivery Logging: Zoomit">
+    <securitypattern href="DocProc_Solutions.securitydfd#_tuYMgKEfEeuR1dWTmsja_g"/>
+    <rolebinding xmi:id="_rYMnwKGtEeu9e7WeB1Gkyg" name="Logged Event" bindsTo="_lG2cMHeBEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_xvUSYKEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_rokmEKGtEeu9e7WeB1Gkyg" name="Logger Process" bindsTo="_P_qcgHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_2GFeUKEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_r7vZsKGtEeu9e7WeB1Gkyg" name="Logs" bindsTo="_bOlzEHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_Ch314KGqEeu9e7WeB1Gkyg"/>
+    </rolebinding>
+    <rolebinding xmi:id="_4ShTsKGuEeu9e7WeB1Gkyg" name="Main Process" bindsTo="_P_qcgHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_ryqgwKGuEeu9e7WeB1Gkyg"/>
+    </rolebinding>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:Solution" xmi:id="_i2S4IKGtEeu9e7WeB1Gkyg" name="Delivery Logging: Email">
+    <securitypattern href="DocProc_Solutions.securitydfd#_tuYMgKEfEeuR1dWTmsja_g"/>
+    <rolebinding xmi:id="_zRthsKGtEeu9e7WeB1Gkyg" name="Logged Event" bindsTo="_BbWzoHeCEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_xvUSYKEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_zfiiUKGtEeu9e7WeB1Gkyg" name="Logger Process" bindsTo="_P_qcgHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_2GFeUKEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_zus_sKGtEeu9e7WeB1Gkyg" name="Logs" bindsTo="_bOlzEHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_Ch314KGqEeu9e7WeB1Gkyg"/>
+    </rolebinding>
+    <rolebinding xmi:id="_5iQdQKGuEeu9e7WeB1Gkyg" name="Main Process" bindsTo="_P_qcgHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_ryqgwKGuEeu9e7WeB1Gkyg"/>
+    </rolebinding>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:Solution" xmi:id="_n-6-0KGtEeu9e7WeB1Gkyg" name="Delivery Logging: PDS">
+    <securitypattern href="DocProc_Solutions.securitydfd#_tuYMgKEfEeuR1dWTmsja_g"/>
+    <rolebinding xmi:id="_6L7h0KGtEeu9e7WeB1Gkyg" name="Logged Event" bindsTo="_ngEg4HeCEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_xvUSYKEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_6dM4AKGtEeu9e7WeB1Gkyg" name="Logger Process" bindsTo="_P_qcgHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_2GFeUKEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_6qWjMKGtEeu9e7WeB1Gkyg" name="Logs" bindsTo="_bOlzEHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_Ch314KGqEeu9e7WeB1Gkyg"/>
+    </rolebinding>
+    <rolebinding xmi:id="_76Bl4KGuEeu9e7WeB1Gkyg" name="Main Process" bindsTo="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_ryqgwKGuEeu9e7WeB1Gkyg"/>
+    </rolebinding>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:Solution" xmi:id="_hvCfsKGuEeu9e7WeB1Gkyg" name="Loggin: PDS URL">
+    <securitypattern href="DocProc_Solutions.securitydfd#_tuYMgKEfEeuR1dWTmsja_g"/>
+    <rolebinding xmi:id="_j-nVoKGuEeu9e7WeB1Gkyg" name="Logged Event" bindsTo="_wQi4AHeCEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_xvUSYKEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_kPtssKGuEeu9e7WeB1Gkyg" name="Logger Process" bindsTo="_P_qcgHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_2GFeUKEfEeuR1dWTmsja_g"/>
+    </rolebinding>
+    <rolebinding xmi:id="_kfl7wKGuEeu9e7WeB1Gkyg" name="Logs" bindsTo="_bOlzEHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_Ch314KGqEeu9e7WeB1Gkyg"/>
+    </rolebinding>
+    <rolebinding xmi:id="_9_Pl8KGuEeu9e7WeB1Gkyg" name="Main Process" bindsTo="_SOXvwHeAEeud_Ok1w7PbGQ">
+      <binds href="DocProc_Solutions.securitydfd#_ryqgwKGuEeu9e7WeB1Gkyg"/>
+    </rolebinding>
+  </containedElements>
+  <containedElements xsi:type="securitydfd:AttackerProfile" xmi:id="_FlrgkK2cEeuXl8xPFJAcfg" name="A">
+    <threatCapability xmi:id="_GErwwK2cEeuXl8xPFJAcfg" minimum="1.5" probable="1.5" maximum="1.5" confidence="100.0" name="a"/>
+    <probabilityOfAction xmi:id="_JN16EK2cEeuXl8xPFJAcfg" minimum="1.5" probable="1.5" maximum="1.5" confidence="100.0" name="b"/>
+    <contactFrequency xmi:id="_LnHekK2cEeuXl8xPFJAcfg" minimum="1.5" probable="1.5" maximum="1.5" confidence="100.0" name="c"/>
+  </containedElements>
+  <resource xsi:type="securitydfd:ThreatTypeCatalog" href="ThreatCatalog.securitydfd#_8UUJ4Mk2EeeheeqXVGLgxA"/>
+  <resource xsi:type="securitydfd:SolutionTypeCatalog" href="DocProc_Solutions.securitydfd#_-AsoMHgREeuyD-Yn_PBFTg"/>
+  <resource xsi:type="securitydfd:ThreatSpecificationCatalog" href="ThreatSpecification_stride.securitydfd#_7G9woMogEee6oZ655YZbJQ"/>
+</securitydfd:DFDModel>
